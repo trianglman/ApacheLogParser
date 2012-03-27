@@ -1,0 +1,4 @@
+"bar" "baz" "http://www.example.com/activity/page2.php?variable=7" "bar" "Apache/2.4.1 (Unix) OpenSSL/1.0.0g" "3052276592" "27654" "200"
+"bar" "baz" "http://www.example.com/activity/index.php" "bar" "Apache/2.4.1 (Unix) OpenSSL/1.0.0g" "3043883888" "27654" "200"
+"bar" "baz" "http://www.example.com/activity/userHome.php" "bar" "Apache/2.4.1 (Unix) OpenSSL/1.0.0g" "3035491184" "27652" "200"
+"bar" "baz" "http://www.example.com/activity/page2.php?variable=7" "bar" "Apache/2.4.1 (Unix) OpenSSL/1.0.0g" "3010313072" "27653" "200"

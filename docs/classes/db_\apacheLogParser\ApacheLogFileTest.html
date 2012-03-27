@@ -1,0 +1,3276 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \apacheLogParser\ApacheLogFileTest</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu"></ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors</a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers (TODO/FIXME)</a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements</a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#addToAssertionCount" title="addToAssertionCount :: "><span class="description">addToAssertionCount()
+        </span><pre>addToAssertionCount()</pre></a></li>
+<li class="method public "><a href="#any" title="any :: "><span class="description">any()
+        </span><pre>any()</pre></a></li>
+<li class="method public "><a href="#anything" title="anything :: "><span class="description">anything()
+        </span><pre>anything()</pre></a></li>
+<li class="method public "><a href="#arrayHasKey" title="arrayHasKey :: "><span class="description">arrayHasKey()
+        </span><pre>arrayHasKey()</pre></a></li>
+<li class="method public "><a href="#assertArrayHasKey" title="assertArrayHasKey :: "><span class="description">assertArrayHasKey()
+        </span><pre>assertArrayHasKey()</pre></a></li>
+<li class="method public "><a href="#assertArrayNotHasKey" title="assertArrayNotHasKey :: "><span class="description">assertArrayNotHasKey()
+        </span><pre>assertArrayNotHasKey()</pre></a></li>
+<li class="method public "><a href="#assertAttributeContains" title="assertAttributeContains :: "><span class="description">assertAttributeContains()
+        </span><pre>assertAttributeContains()</pre></a></li>
+<li class="method public "><a href="#assertAttributeContainsOnly" title="assertAttributeContainsOnly :: "><span class="description">assertAttributeContainsOnly()
+        </span><pre>assertAttributeContainsOnly()</pre></a></li>
+<li class="method public "><a href="#assertAttributeCount" title="assertAttributeCount :: "><span class="description">assertAttributeCount()
+        </span><pre>assertAttributeCount()</pre></a></li>
+<li class="method public "><a href="#assertAttributeEmpty" title="assertAttributeEmpty :: "><span class="description">assertAttributeEmpty()
+        </span><pre>assertAttributeEmpty()</pre></a></li>
+<li class="method public "><a href="#assertAttributeEquals" title="assertAttributeEquals :: "><span class="description">assertAttributeEquals()
+        </span><pre>assertAttributeEquals()</pre></a></li>
+<li class="method public "><a href="#assertAttributeGreaterThan" title="assertAttributeGreaterThan :: "><span class="description">assertAttributeGreaterThan()
+        </span><pre>assertAttributeGreaterThan()</pre></a></li>
+<li class="method public "><a href="#assertAttributeGreaterThanOrEqual" title="assertAttributeGreaterThanOrEqual :: "><span class="description">assertAttributeGreaterThanOrEqual()
+        </span><pre>assertAttributeGreaterThanOrEqual()</pre></a></li>
+<li class="method public "><a href="#assertAttributeInstanceOf" title="assertAttributeInstanceOf :: "><span class="description">assertAttributeInstanceOf()
+        </span><pre>assertAttributeInstanceOf()</pre></a></li>
+<li class="method public "><a href="#assertAttributeInternalType" title="assertAttributeInternalType :: "><span class="description">assertAttributeInternalType()
+        </span><pre>assertAttributeInternalType()</pre></a></li>
+<li class="method public "><a href="#assertAttributeLessThan" title="assertAttributeLessThan :: "><span class="description">assertAttributeLessThan()
+        </span><pre>assertAttributeLessThan()</pre></a></li>
+<li class="method public "><a href="#assertAttributeLessThanOrEqual" title="assertAttributeLessThanOrEqual :: "><span class="description">assertAttributeLessThanOrEqual()
+        </span><pre>assertAttributeLessThanOrEqual()</pre></a></li>
+<li class="method public "><a href="#assertAttributeNotContains" title="assertAttributeNotContains :: "><span class="description">assertAttributeNotContains()
+        </span><pre>assertAttributeNotContains()</pre></a></li>
+<li class="method public "><a href="#assertAttributeNotContainsOnly" title="assertAttributeNotContainsOnly :: "><span class="description">assertAttributeNotContainsOnly()
+        </span><pre>assertAttributeNotContainsOnly()</pre></a></li>
+<li class="method public "><a href="#assertAttributeNotCount" title="assertAttributeNotCount :: "><span class="description">assertAttributeNotCount()
+        </span><pre>assertAttributeNotCount()</pre></a></li>
+<li class="method public "><a href="#assertAttributeNotEmpty" title="assertAttributeNotEmpty :: "><span class="description">assertAttributeNotEmpty()
+        </span><pre>assertAttributeNotEmpty()</pre></a></li>
+<li class="method public "><a href="#assertAttributeNotEquals" title="assertAttributeNotEquals :: "><span class="description">assertAttributeNotEquals()
+        </span><pre>assertAttributeNotEquals()</pre></a></li>
+<li class="method public "><a href="#assertAttributeNotInstanceOf" title="assertAttributeNotInstanceOf :: "><span class="description">assertAttributeNotInstanceOf()
+        </span><pre>assertAttributeNotInstanceOf()</pre></a></li>
+<li class="method public "><a href="#assertAttributeNotInternalType" title="assertAttributeNotInternalType :: "><span class="description">assertAttributeNotInternalType()
+        </span><pre>assertAttributeNotInternalType()</pre></a></li>
+<li class="method public "><a href="#assertAttributeNotSame" title="assertAttributeNotSame :: "><span class="description">assertAttributeNotSame()
+        </span><pre>assertAttributeNotSame()</pre></a></li>
+<li class="method public "><a href="#assertAttributeSame" title="assertAttributeSame :: "><span class="description">assertAttributeSame()
+        </span><pre>assertAttributeSame()</pre></a></li>
+<li class="method public "><a href="#assertClassHasAttribute" title="assertClassHasAttribute :: "><span class="description">assertClassHasAttribute()
+        </span><pre>assertClassHasAttribute()</pre></a></li>
+<li class="method public "><a href="#assertClassHasStaticAttribute" title="assertClassHasStaticAttribute :: "><span class="description">assertClassHasStaticAttribute()
+        </span><pre>assertClassHasStaticAttribute()</pre></a></li>
+<li class="method public "><a href="#assertClassNotHasAttribute" title="assertClassNotHasAttribute :: "><span class="description">assertClassNotHasAttribute()
+        </span><pre>assertClassNotHasAttribute()</pre></a></li>
+<li class="method public "><a href="#assertClassNotHasStaticAttribute" title="assertClassNotHasStaticAttribute :: "><span class="description">assertClassNotHasStaticAttribute()
+        </span><pre>assertClassNotHasStaticAttribute()</pre></a></li>
+<li class="method public "><a href="#assertContains" title="assertContains :: "><span class="description">assertContains()
+        </span><pre>assertContains()</pre></a></li>
+<li class="method public "><a href="#assertContainsOnly" title="assertContainsOnly :: "><span class="description">assertContainsOnly()
+        </span><pre>assertContainsOnly()</pre></a></li>
+<li class="method public "><a href="#assertCount" title="assertCount :: "><span class="description">assertCount()
+        </span><pre>assertCount()</pre></a></li>
+<li class="method public "><a href="#assertEmpty" title="assertEmpty :: "><span class="description">assertEmpty()
+        </span><pre>assertEmpty()</pre></a></li>
+<li class="method public "><a href="#assertEqualXMLStructure" title="assertEqualXMLStructure :: "><span class="description">assertEqualXMLStructure()
+        </span><pre>assertEqualXMLStructure()</pre></a></li>
+<li class="method public "><a href="#assertEquals" title="assertEquals :: "><span class="description">assertEquals()
+        </span><pre>assertEquals()</pre></a></li>
+<li class="method public "><a href="#assertFalse" title="assertFalse :: "><span class="description">assertFalse()
+        </span><pre>assertFalse()</pre></a></li>
+<li class="method public "><a href="#assertFileEquals" title="assertFileEquals :: "><span class="description">assertFileEquals()
+        </span><pre>assertFileEquals()</pre></a></li>
+<li class="method public "><a href="#assertFileExists" title="assertFileExists :: "><span class="description">assertFileExists()
+        </span><pre>assertFileExists()</pre></a></li>
+<li class="method public "><a href="#assertFileNotEquals" title="assertFileNotEquals :: "><span class="description">assertFileNotEquals()
+        </span><pre>assertFileNotEquals()</pre></a></li>
+<li class="method public "><a href="#assertFileNotExists" title="assertFileNotExists :: "><span class="description">assertFileNotExists()
+        </span><pre>assertFileNotExists()</pre></a></li>
+<li class="method public "><a href="#assertGreaterThan" title="assertGreaterThan :: "><span class="description">assertGreaterThan()
+        </span><pre>assertGreaterThan()</pre></a></li>
+<li class="method public "><a href="#assertGreaterThanOrEqual" title="assertGreaterThanOrEqual :: "><span class="description">assertGreaterThanOrEqual()
+        </span><pre>assertGreaterThanOrEqual()</pre></a></li>
+<li class="method public "><a href="#assertInstanceOf" title="assertInstanceOf :: "><span class="description">assertInstanceOf()
+        </span><pre>assertInstanceOf()</pre></a></li>
+<li class="method public "><a href="#assertInternalType" title="assertInternalType :: "><span class="description">assertInternalType()
+        </span><pre>assertInternalType()</pre></a></li>
+<li class="method public "><a href="#assertLessThan" title="assertLessThan :: "><span class="description">assertLessThan()
+        </span><pre>assertLessThan()</pre></a></li>
+<li class="method public "><a href="#assertLessThanOrEqual" title="assertLessThanOrEqual :: "><span class="description">assertLessThanOrEqual()
+        </span><pre>assertLessThanOrEqual()</pre></a></li>
+<li class="method public "><a href="#assertNotContains" title="assertNotContains :: "><span class="description">assertNotContains()
+        </span><pre>assertNotContains()</pre></a></li>
+<li class="method public "><a href="#assertNotContainsOnly" title="assertNotContainsOnly :: "><span class="description">assertNotContainsOnly()
+        </span><pre>assertNotContainsOnly()</pre></a></li>
+<li class="method public "><a href="#assertNotCount" title="assertNotCount :: "><span class="description">assertNotCount()
+        </span><pre>assertNotCount()</pre></a></li>
+<li class="method public "><a href="#assertNotEmpty" title="assertNotEmpty :: "><span class="description">assertNotEmpty()
+        </span><pre>assertNotEmpty()</pre></a></li>
+<li class="method public "><a href="#assertNotEquals" title="assertNotEquals :: "><span class="description">assertNotEquals()
+        </span><pre>assertNotEquals()</pre></a></li>
+<li class="method public "><a href="#assertNotInstanceOf" title="assertNotInstanceOf :: "><span class="description">assertNotInstanceOf()
+        </span><pre>assertNotInstanceOf()</pre></a></li>
+<li class="method public "><a href="#assertNotInternalType" title="assertNotInternalType :: "><span class="description">assertNotInternalType()
+        </span><pre>assertNotInternalType()</pre></a></li>
+<li class="method public "><a href="#assertNotNull" title="assertNotNull :: "><span class="description">assertNotNull()
+        </span><pre>assertNotNull()</pre></a></li>
+<li class="method public "><a href="#assertNotRegExp" title="assertNotRegExp :: "><span class="description">assertNotRegExp()
+        </span><pre>assertNotRegExp()</pre></a></li>
+<li class="method public "><a href="#assertNotSame" title="assertNotSame :: "><span class="description">assertNotSame()
+        </span><pre>assertNotSame()</pre></a></li>
+<li class="method public "><a href="#assertNotSameSize" title="assertNotSameSize :: "><span class="description">assertNotSameSize()
+        </span><pre>assertNotSameSize()</pre></a></li>
+<li class="method public "><a href="#assertNotTag" title="assertNotTag :: "><span class="description">assertNotTag()
+        </span><pre>assertNotTag()</pre></a></li>
+<li class="method public "><a href="#assertNull" title="assertNull :: "><span class="description">assertNull()
+        </span><pre>assertNull()</pre></a></li>
+<li class="method public "><a href="#assertObjectHasAttribute" title="assertObjectHasAttribute :: "><span class="description">assertObjectHasAttribute()
+        </span><pre>assertObjectHasAttribute()</pre></a></li>
+<li class="method public "><a href="#assertObjectNotHasAttribute" title="assertObjectNotHasAttribute :: "><span class="description">assertObjectNotHasAttribute()
+        </span><pre>assertObjectNotHasAttribute()</pre></a></li>
+<li class="method public "><a href="#assertRegExp" title="assertRegExp :: "><span class="description">assertRegExp()
+        </span><pre>assertRegExp()</pre></a></li>
+<li class="method public "><a href="#assertSame" title="assertSame :: "><span class="description">assertSame()
+        </span><pre>assertSame()</pre></a></li>
+<li class="method public "><a href="#assertSameSize" title="assertSameSize :: "><span class="description">assertSameSize()
+        </span><pre>assertSameSize()</pre></a></li>
+<li class="method public "><a href="#assertSelectCount" title="assertSelectCount :: "><span class="description">assertSelectCount()
+        </span><pre>assertSelectCount()</pre></a></li>
+<li class="method public "><a href="#assertSelectEquals" title="assertSelectEquals :: "><span class="description">assertSelectEquals()
+        </span><pre>assertSelectEquals()</pre></a></li>
+<li class="method public "><a href="#assertSelectRegExp" title="assertSelectRegExp :: "><span class="description">assertSelectRegExp()
+        </span><pre>assertSelectRegExp()</pre></a></li>
+<li class="method public "><a href="#assertStringEndsNotWith" title="assertStringEndsNotWith :: "><span class="description">assertStringEndsNotWith()
+        </span><pre>assertStringEndsNotWith()</pre></a></li>
+<li class="method public "><a href="#assertStringEndsWith" title="assertStringEndsWith :: "><span class="description">assertStringEndsWith()
+        </span><pre>assertStringEndsWith()</pre></a></li>
+<li class="method public "><a href="#assertStringEqualsFile" title="assertStringEqualsFile :: "><span class="description">assertStringEqualsFile()
+        </span><pre>assertStringEqualsFile()</pre></a></li>
+<li class="method public "><a href="#assertStringMatchesFormat" title="assertStringMatchesFormat :: "><span class="description">assertStringMatchesFormat()
+        </span><pre>assertStringMatchesFormat()</pre></a></li>
+<li class="method public "><a href="#assertStringMatchesFormatFile" title="assertStringMatchesFormatFile :: "><span class="description">assertStringMatchesFormatFile()
+        </span><pre>assertStringMatchesFormatFile()</pre></a></li>
+<li class="method public "><a href="#assertStringNotEqualsFile" title="assertStringNotEqualsFile :: "><span class="description">assertStringNotEqualsFile()
+        </span><pre>assertStringNotEqualsFile()</pre></a></li>
+<li class="method public "><a href="#assertStringNotMatchesFormat" title="assertStringNotMatchesFormat :: "><span class="description">assertStringNotMatchesFormat()
+        </span><pre>assertStringNotMatchesFormat()</pre></a></li>
+<li class="method public "><a href="#assertStringNotMatchesFormatFile" title="assertStringNotMatchesFormatFile :: "><span class="description">assertStringNotMatchesFormatFile()
+        </span><pre>assertStringNotMatchesFormatFile()</pre></a></li>
+<li class="method public "><a href="#assertStringStartsNotWith" title="assertStringStartsNotWith :: "><span class="description">assertStringStartsNotWith()
+        </span><pre>assertStringStartsNotWith()</pre></a></li>
+<li class="method public "><a href="#assertStringStartsWith" title="assertStringStartsWith :: "><span class="description">assertStringStartsWith()
+        </span><pre>assertStringStartsWith()</pre></a></li>
+<li class="method public "><a href="#assertTag" title="assertTag :: "><span class="description">assertTag()
+        </span><pre>assertTag()</pre></a></li>
+<li class="method public "><a href="#assertThat" title="assertThat :: "><span class="description">assertThat()
+        </span><pre>assertThat()</pre></a></li>
+<li class="method public "><a href="#assertTrue" title="assertTrue :: "><span class="description">assertTrue()
+        </span><pre>assertTrue()</pre></a></li>
+<li class="method public "><a href="#assertXmlFileEqualsXmlFile" title="assertXmlFileEqualsXmlFile :: "><span class="description">assertXmlFileEqualsXmlFile()
+        </span><pre>assertXmlFileEqualsXmlFile()</pre></a></li>
+<li class="method public "><a href="#assertXmlFileNotEqualsXmlFile" title="assertXmlFileNotEqualsXmlFile :: "><span class="description">assertXmlFileNotEqualsXmlFile()
+        </span><pre>assertXmlFileNotEqualsXmlFile()</pre></a></li>
+<li class="method public "><a href="#assertXmlStringEqualsXmlFile" title="assertXmlStringEqualsXmlFile :: "><span class="description">assertXmlStringEqualsXmlFile()
+        </span><pre>assertXmlStringEqualsXmlFile()</pre></a></li>
+<li class="method public "><a href="#assertXmlStringEqualsXmlString" title="assertXmlStringEqualsXmlString :: "><span class="description">assertXmlStringEqualsXmlString()
+        </span><pre>assertXmlStringEqualsXmlString()</pre></a></li>
+<li class="method public "><a href="#assertXmlStringNotEqualsXmlFile" title="assertXmlStringNotEqualsXmlFile :: "><span class="description">assertXmlStringNotEqualsXmlFile()
+        </span><pre>assertXmlStringNotEqualsXmlFile()</pre></a></li>
+<li class="method public "><a href="#assertXmlStringNotEqualsXmlString" title="assertXmlStringNotEqualsXmlString :: "><span class="description">assertXmlStringNotEqualsXmlString()
+        </span><pre>assertXmlStringNotEqualsXmlString()</pre></a></li>
+<li class="method public "><a href="#at" title="at :: "><span class="description">at()
+        </span><pre>at()</pre></a></li>
+<li class="method public "><a href="#atLeastOnce" title="atLeastOnce :: "><span class="description">atLeastOnce()
+        </span><pre>atLeastOnce()</pre></a></li>
+<li class="method public "><a href="#attribute" title="attribute :: "><span class="description">attribute()
+        </span><pre>attribute()</pre></a></li>
+<li class="method public "><a href="#attributeEqualTo" title="attributeEqualTo :: "><span class="description">attributeEqualTo()
+        </span><pre>attributeEqualTo()</pre></a></li>
+<li class="method public "><a href="#classHasAttribute" title="classHasAttribute :: "><span class="description">classHasAttribute()
+        </span><pre>classHasAttribute()</pre></a></li>
+<li class="method public "><a href="#classHasStaticAttribute" title="classHasStaticAttribute :: "><span class="description">classHasStaticAttribute()
+        </span><pre>classHasStaticAttribute()</pre></a></li>
+<li class="method public "><a href="#contains" title="contains :: "><span class="description">contains()
+        </span><pre>contains()</pre></a></li>
+<li class="method public "><a href="#containsOnly" title="containsOnly :: "><span class="description">containsOnly()
+        </span><pre>containsOnly()</pre></a></li>
+<li class="method public "><a href="#count" title="count :: "><span class="description">count()
+        </span><pre>count()</pre></a></li>
+<li class="method public "><a href="#equalTo" title="equalTo :: "><span class="description">equalTo()
+        </span><pre>equalTo()</pre></a></li>
+<li class="method public "><a href="#exactly" title="exactly :: "><span class="description">exactly()
+        </span><pre>exactly()</pre></a></li>
+<li class="method public "><a href="#expectOutputRegex" title="expectOutputRegex :: "><span class="description">expectOutputRegex()
+        </span><pre>expectOutputRegex()</pre></a></li>
+<li class="method public "><a href="#expectOutputString" title="expectOutputString :: "><span class="description">expectOutputString()
+        </span><pre>expectOutputString()</pre></a></li>
+<li class="method public "><a href="#fail" title="fail :: "><span class="description">fail()
+        </span><pre>fail()</pre></a></li>
+<li class="method public "><a href="#fileExists" title="fileExists :: "><span class="description">fileExists()
+        </span><pre>fileExists()</pre></a></li>
+<li class="method public "><a href="#getActualOutput" title="getActualOutput :: "><span class="description">getActualOutput()
+        </span><pre>getActualOutput()</pre></a></li>
+<li class="method public "><a href="#getAnnotations" title="getAnnotations :: "><span class="description">getAnnotations()
+        </span><pre>getAnnotations()</pre></a></li>
+<li class="method public "><a href="#getCount" title="getCount :: "><span class="description">getCount()
+        </span><pre>getCount()</pre></a></li>
+<li class="method public "><a href="#getExpectedException" title="getExpectedException :: "><span class="description">getExpectedException()
+        </span><pre>getExpectedException()</pre></a></li>
+<li class="method public "><a href="#getMock" title="getMock :: "><span class="description">getMock()
+        </span><pre>getMock()</pre></a></li>
+<li class="method public "><a href="#getMockBuilder" title="getMockBuilder :: "><span class="description">getMockBuilder()
+        </span><pre>getMockBuilder()</pre></a></li>
+<li class="method public "><a href="#getMockForAbstractClass" title="getMockForAbstractClass :: "><span class="description">getMockForAbstractClass()
+        </span><pre>getMockForAbstractClass()</pre></a></li>
+<li class="method public "><a href="#getName" title="getName :: "><span class="description">getName()
+        </span><pre>getName()</pre></a></li>
+<li class="method public "><a href="#getNumAssertions" title="getNumAssertions :: "><span class="description">getNumAssertions()
+        </span><pre>getNumAssertions()</pre></a></li>
+<li class="method public "><a href="#getResult" title="getResult :: "><span class="description">getResult()
+        </span><pre>getResult()</pre></a></li>
+<li class="method public "><a href="#getSize" title="getSize :: "><span class="description">getSize()
+        </span><pre>getSize()</pre></a></li>
+<li class="method public "><a href="#getStatus" title="getStatus :: "><span class="description">getStatus()
+        </span><pre>getStatus()</pre></a></li>
+<li class="method public "><a href="#getStatusMessage" title="getStatusMessage :: "><span class="description">getStatusMessage()
+        </span><pre>getStatusMessage()</pre></a></li>
+<li class="method public "><a href="#getTestResultObject" title="getTestResultObject :: "><span class="description">getTestResultObject()
+        </span><pre>getTestResultObject()</pre></a></li>
+<li class="method public "><a href="#greaterThan" title="greaterThan :: "><span class="description">greaterThan()
+        </span><pre>greaterThan()</pre></a></li>
+<li class="method public "><a href="#greaterThanOrEqual" title="greaterThanOrEqual :: "><span class="description">greaterThanOrEqual()
+        </span><pre>greaterThanOrEqual()</pre></a></li>
+<li class="method public "><a href="#hasFailed" title="hasFailed :: "><span class="description">hasFailed()
+        </span><pre>hasFailed()</pre></a></li>
+<li class="method public "><a href="#hasOutput" title="hasOutput :: "><span class="description">hasOutput()
+        </span><pre>hasOutput()</pre></a></li>
+<li class="method public "><a href="#hasPerformedExpectationsOnOutput" title="hasPerformedExpectationsOnOutput :: "><span class="description">hasPerformedExpectationsOnOutput()
+        </span><pre>hasPerformedExpectationsOnOutput()</pre></a></li>
+<li class="method public "><a href="#identicalTo" title="identicalTo :: "><span class="description">identicalTo()
+        </span><pre>identicalTo()</pre></a></li>
+<li class="method public "><a href="#isEmpty" title="isEmpty :: "><span class="description">isEmpty()
+        </span><pre>isEmpty()</pre></a></li>
+<li class="method public "><a href="#isFalse" title="isFalse :: "><span class="description">isFalse()
+        </span><pre>isFalse()</pre></a></li>
+<li class="method public "><a href="#isInstanceOf" title="isInstanceOf :: "><span class="description">isInstanceOf()
+        </span><pre>isInstanceOf()</pre></a></li>
+<li class="method public "><a href="#isNull" title="isNull :: "><span class="description">isNull()
+        </span><pre>isNull()</pre></a></li>
+<li class="method public "><a href="#isTrue" title="isTrue :: "><span class="description">isTrue()
+        </span><pre>isTrue()</pre></a></li>
+<li class="method public "><a href="#isType" title="isType :: "><span class="description">isType()
+        </span><pre>isType()</pre></a></li>
+<li class="method public "><a href="#lessThan" title="lessThan :: "><span class="description">lessThan()
+        </span><pre>lessThan()</pre></a></li>
+<li class="method public "><a href="#lessThanOrEqual" title="lessThanOrEqual :: "><span class="description">lessThanOrEqual()
+        </span><pre>lessThanOrEqual()</pre></a></li>
+<li class="method public "><a href="#logicalAnd" title="logicalAnd :: "><span class="description">logicalAnd()
+        </span><pre>logicalAnd()</pre></a></li>
+<li class="method public "><a href="#logicalNot" title="logicalNot :: "><span class="description">logicalNot()
+        </span><pre>logicalNot()</pre></a></li>
+<li class="method public "><a href="#logicalOr" title="logicalOr :: "><span class="description">logicalOr()
+        </span><pre>logicalOr()</pre></a></li>
+<li class="method public "><a href="#logicalXor" title="logicalXor :: "><span class="description">logicalXor()
+        </span><pre>logicalXor()</pre></a></li>
+<li class="method public "><a href="#markTestIncomplete" title="markTestIncomplete :: "><span class="description">markTestIncomplete()
+        </span><pre>markTestIncomplete()</pre></a></li>
+<li class="method public "><a href="#markTestSkipped" title="markTestSkipped :: "><span class="description">markTestSkipped()
+        </span><pre>markTestSkipped()</pre></a></li>
+<li class="method public "><a href="#matches" title="matches :: "><span class="description">matches()
+        </span><pre>matches()</pre></a></li>
+<li class="method public "><a href="#matchesRegularExpression" title="matchesRegularExpression :: "><span class="description">matchesRegularExpression()
+        </span><pre>matchesRegularExpression()</pre></a></li>
+<li class="method public "><a href="#never" title="never :: "><span class="description">never()
+        </span><pre>never()</pre></a></li>
+<li class="method public "><a href="#objectHasAttribute" title="objectHasAttribute :: "><span class="description">objectHasAttribute()
+        </span><pre>objectHasAttribute()</pre></a></li>
+<li class="method public "><a href="#onConsecutiveCalls" title="onConsecutiveCalls :: "><span class="description">onConsecutiveCalls()
+        </span><pre>onConsecutiveCalls()</pre></a></li>
+<li class="method public "><a href="#once" title="once :: "><span class="description">once()
+        </span><pre>once()</pre></a></li>
+<li class="method public "><a href="#readAttribute" title="readAttribute :: "><span class="description">readAttribute()
+        </span><pre>readAttribute()</pre></a></li>
+<li class="method public "><a href="#resetCount" title="resetCount :: "><span class="description">resetCount()
+        </span><pre>resetCount()</pre></a></li>
+<li class="method public "><a href="#returnArgument" title="returnArgument :: "><span class="description">returnArgument()
+        </span><pre>returnArgument()</pre></a></li>
+<li class="method public "><a href="#returnCallback" title="returnCallback :: "><span class="description">returnCallback()
+        </span><pre>returnCallback()</pre></a></li>
+<li class="method public "><a href="#returnSelf" title="returnSelf :: "><span class="description">returnSelf()
+        </span><pre>returnSelf()</pre></a></li>
+<li class="method public "><a href="#returnValue" title="returnValue :: "><span class="description">returnValue()
+        </span><pre>returnValue()</pre></a></li>
+<li class="method public "><a href="#returnValueMap" title="returnValueMap :: "><span class="description">returnValueMap()
+        </span><pre>returnValueMap()</pre></a></li>
+<li class="method public "><a href="#run" title="run :: "><span class="description">run()
+        </span><pre>run()</pre></a></li>
+<li class="method public "><a href="#runBare" title="runBare :: "><span class="description">runBare()
+        </span><pre>runBare()</pre></a></li>
+<li class="method public "><a href="#setBackupGlobals" title="setBackupGlobals :: "><span class="description">setBackupGlobals()
+        </span><pre>setBackupGlobals()</pre></a></li>
+<li class="method public "><a href="#setBackupStaticAttributes" title="setBackupStaticAttributes :: "><span class="description">setBackupStaticAttributes()
+        </span><pre>setBackupStaticAttributes()</pre></a></li>
+<li class="method public "><a href="#setDependencies" title="setDependencies :: "><span class="description">setDependencies()
+        </span><pre>setDependencies()</pre></a></li>
+<li class="method public "><a href="#setDependencyInput" title="setDependencyInput :: "><span class="description">setDependencyInput()
+        </span><pre>setDependencyInput()</pre></a></li>
+<li class="method public "><a href="#setExpectedException" title="setExpectedException :: "><span class="description">setExpectedException()
+        </span><pre>setExpectedException()</pre></a></li>
+<li class="method public "><a href="#setInIsolation" title="setInIsolation :: "><span class="description">setInIsolation()
+        </span><pre>setInIsolation()</pre></a></li>
+<li class="method public "><a href="#setName" title="setName :: "><span class="description">setName()
+        </span><pre>setName()</pre></a></li>
+<li class="method public "><a href="#setOutputCallback" title="setOutputCallback :: "><span class="description">setOutputCallback()
+        </span><pre>setOutputCallback()</pre></a></li>
+<li class="method public "><a href="#setPreserveGlobalState" title="setPreserveGlobalState :: "><span class="description">setPreserveGlobalState()
+        </span><pre>setPreserveGlobalState()</pre></a></li>
+<li class="method public "><a href="#setResult" title="setResult :: "><span class="description">setResult()
+        </span><pre>setResult()</pre></a></li>
+<li class="method public "><a href="#setRunTestInSeparateProcess" title="setRunTestInSeparateProcess :: "><span class="description">setRunTestInSeparateProcess()
+        </span><pre>setRunTestInSeparateProcess()</pre></a></li>
+<li class="method public "><a href="#setTestResultObject" title="setTestResultObject :: "><span class="description">setTestResultObject()
+        </span><pre>setTestResultObject()</pre></a></li>
+<li class="method public "><a href="#setUpBeforeClass" title="setUpBeforeClass :: "><span class="description">setUpBeforeClass()
+        </span><pre>setUpBeforeClass()</pre></a></li>
+<li class="method public "><a href="#setUseErrorHandler" title="setUseErrorHandler :: "><span class="description">setUseErrorHandler()
+        </span><pre>setUseErrorHandler()</pre></a></li>
+<li class="method public "><a href="#setUseOutputBuffering" title="setUseOutputBuffering :: "><span class="description">setUseOutputBuffering()
+        </span><pre>setUseOutputBuffering()</pre></a></li>
+<li class="method public "><a href="#stringContains" title="stringContains :: "><span class="description">stringContains()
+        </span><pre>stringContains()</pre></a></li>
+<li class="method public "><a href="#stringEndsWith" title="stringEndsWith :: "><span class="description">stringEndsWith()
+        </span><pre>stringEndsWith()</pre></a></li>
+<li class="method public "><a href="#stringStartsWith" title="stringStartsWith :: "><span class="description">stringStartsWith()
+        </span><pre>stringStartsWith()</pre></a></li>
+<li class="method public "><a href="#tearDownAfterClass" title="tearDownAfterClass :: "><span class="description">tearDownAfterClass()
+        </span><pre>tearDownAfterClass()</pre></a></li>
+<li class="method public "><a href="#teardown" title="teardown :: "><span class="description">teardown()
+        </span><pre>teardown()</pre></a></li>
+<li class="method public "><a href="#testConvertFormatToRegExAllSegmented" title="testConvertFormatToRegExAllSegmented :: "><span class="description">testConvertFormatToRegExAllSegmented()
+        </span><pre>testConvertFormatToRegExAllSegmented()</pre></a></li>
+<li class="method public "><a href="#testConvertFormatToRegExAllStandard" title="testConvertFormatToRegExAllStandard :: "><span class="description">testConvertFormatToRegExAllStandard()
+        </span><pre>testConvertFormatToRegExAllStandard()</pre></a></li>
+<li class="method public "><a href="#testConvertFormatToRegExCombined" title="testConvertFormatToRegExCombined :: "><span class="description">testConvertFormatToRegExCombined()
+        </span><pre>testConvertFormatToRegExCombined()</pre></a></li>
+<li class="method public "><a href="#testConvertFormatToRegExCommon" title="testConvertFormatToRegExCommon :: "><span class="description">testConvertFormatToRegExCommon()
+        </span><pre>testConvertFormatToRegExCommon()</pre></a></li>
+<li class="method public "><a href="#testConvertFormatToRegExConditional" title="testConvertFormatToRegExConditional :: "><span class="description">testConvertFormatToRegExConditional()
+        </span><pre>testConvertFormatToRegExConditional()</pre></a></li>
+<li class="method public "><a href="#testGetRowOneCommon" title="testGetRowOneCommon :: "><span class="description">testGetRowOneCommon()
+        </span><pre>testGetRowOneCommon()</pre></a></li>
+<li class="method public "><a href="#testParseLogAllSegmentedAll" title="testParseLogAllSegmentedAll :: "><span class="description">testParseLogAllSegmentedAll()
+        </span><pre>testParseLogAllSegmentedAll()</pre></a></li>
+<li class="method public "><a href="#testParseLogAllSegmentedOne" title="testParseLogAllSegmentedOne :: "><span class="description">testParseLogAllSegmentedOne()
+        </span><pre>testParseLogAllSegmentedOne()</pre></a></li>
+<li class="method public "><a href="#testParseLogAllStandardAll" title="testParseLogAllStandardAll :: "><span class="description">testParseLogAllStandardAll()
+        </span><pre>testParseLogAllStandardAll()</pre></a></li>
+<li class="method public "><a href="#testParseLogAllStandardOne" title="testParseLogAllStandardOne :: "><span class="description">testParseLogAllStandardOne()
+        </span><pre>testParseLogAllStandardOne()</pre></a></li>
+<li class="method public "><a href="#testParseLogCombinedAll" title="testParseLogCombinedAll :: "><span class="description">testParseLogCombinedAll()
+        </span><pre>testParseLogCombinedAll()</pre></a></li>
+<li class="method public "><a href="#testParseLogCombinedOne" title="testParseLogCombinedOne :: "><span class="description">testParseLogCombinedOne()
+        </span><pre>testParseLogCombinedOne()</pre></a></li>
+<li class="method public "><a href="#testParseLogCommonAll" title="testParseLogCommonAll :: "><span class="description">testParseLogCommonAll()
+        </span><pre>testParseLogCommonAll()</pre></a></li>
+<li class="method public "><a href="#testParseLogCommonOne" title="testParseLogCommonOne :: "><span class="description">testParseLogCommonOne()
+        </span><pre>testParseLogCommonOne()</pre></a></li>
+<li class="method public "><a href="#testProcessApacheLogCommandBasic" title="testProcessApacheLogCommandBasic :: "><span class="description">testProcessApacheLogCommandBasic()
+        </span><pre>testProcessApacheLogCommandBasic()</pre></a></li>
+<li class="method public "><a href="#testProcessApacheLogCommandSegments" title="testProcessApacheLogCommandSegments :: "><span class="description">testProcessApacheLogCommandSegments()
+        </span><pre>testProcessApacheLogCommandSegments()</pre></a></li>
+<li class="method public "><a href="#throwException" title="throwException :: "><span class="description">throwException()
+        </span><pre>throwException()</pre></a></li>
+<li class="method public "><a href="#toString" title="toString :: "><span class="description">toString()
+        </span><pre>toString()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#assertPostConditions" title="assertPostConditions :: "><span class="description">assertPostConditions()
+        </span><pre>assertPostConditions()</pre></a></li>
+<li class="method protected "><a href="#assertPreConditions" title="assertPreConditions :: "><span class="description">assertPreConditions()
+        </span><pre>assertPreConditions()</pre></a></li>
+<li class="method protected "><a href="#checkRequirements" title="checkRequirements :: "><span class="description">checkRequirements()
+        </span><pre>checkRequirements()</pre></a></li>
+<li class="method protected "><a href="#createResult" title="createResult :: "><span class="description">createResult()
+        </span><pre>createResult()</pre></a></li>
+<li class="method protected "><a href="#dataToString" title="dataToString :: "><span class="description">dataToString()
+        </span><pre>dataToString()</pre></a></li>
+<li class="method protected "><a href="#getDataSetAsString" title="getDataSetAsString :: "><span class="description">getDataSetAsString()
+        </span><pre>getDataSetAsString()</pre></a></li>
+<li class="method protected "><a href="#getMockClass" title="getMockClass :: "><span class="description">getMockClass()
+        </span><pre>getMockClass()</pre></a></li>
+<li class="method protected "><a href="#getMockFromWsdl" title="getMockFromWsdl :: "><span class="description">getMockFromWsdl()
+        </span><pre>getMockFromWsdl()</pre></a></li>
+<li class="method protected "><a href="#getObjectForTrait" title="getObjectForTrait :: "><span class="description">getObjectForTrait()
+        </span><pre>getObjectForTrait()</pre></a></li>
+<li class="method protected "><a href="#handleDependencies" title="handleDependencies :: "><span class="description">handleDependencies()
+        </span><pre>handleDependencies()</pre></a></li>
+<li class="method protected "><a href="#iniSet" title="iniSet :: "><span class="description">iniSet()
+        </span><pre>iniSet()</pre></a></li>
+<li class="method protected "><a href="#onNotSuccessfulTest" title="onNotSuccessfulTest :: "><span class="description">onNotSuccessfulTest()
+        </span><pre>onNotSuccessfulTest()</pre></a></li>
+<li class="method protected "><a href="#prepareTemplate" title="prepareTemplate :: "><span class="description">prepareTemplate()
+        </span><pre>prepareTemplate()</pre></a></li>
+<li class="method protected "><a href="#runTest" title="runTest :: "><span class="description">runTest()
+        </span><pre>runTest()</pre></a></li>
+<li class="method protected "><a href="#setExpectedExceptionFromAnnotation" title="setExpectedExceptionFromAnnotation :: "><span class="description">setExpectedExceptionFromAnnotation()
+        </span><pre>setExpectedExceptionFromAnnotation()</pre></a></li>
+<li class="method protected "><a href="#setLocale" title="setLocale :: "><span class="description">setLocale()
+        </span><pre>setLocale()</pre></a></li>
+<li class="method protected "><a href="#setRequirementsFromAnnotation" title="setRequirementsFromAnnotation :: "><span class="description">setRequirementsFromAnnotation()
+        </span><pre>setRequirementsFromAnnotation()</pre></a></li>
+<li class="method protected "><a href="#setUp" title="setUp :: "><span class="description">setUp()
+        </span><pre>setUp()</pre></a></li>
+<li class="method protected "><a href="#setUseErrorHandlerFromAnnotation" title="setUseErrorHandlerFromAnnotation :: "><span class="description">setUseErrorHandlerFromAnnotation()
+        </span><pre>setUseErrorHandlerFromAnnotation()</pre></a></li>
+<li class="method protected "><a href="#setUseOutputBufferingFromAnnotation" title="setUseOutputBufferingFromAnnotation :: "><span class="description">setUseOutputBufferingFromAnnotation()
+        </span><pre>setUseOutputBufferingFromAnnotation()</pre></a></li>
+<li class="method protected "><a href="#tearDown" title="tearDown :: "><span class="description">tearDown()
+        </span><pre>tearDown()</pre></a></li>
+<li class="method protected "><a href="#verifyMockObjects" title="verifyMockObjects :: "><span class="description">verifyMockObjects()
+        </span><pre>verifyMockObjects()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24logFiles" title="$logFiles :: Paths to the log files to be used for testing"><span class="description">Paths to the log files to be used for testing</span><pre>$logFiles</pre></a></li>
+<li class="property protected "><a href="#%24logFormats" title="$logFormats :: Log formats to be used for testing"><span class="description">Log formats to be used for testing</span><pre>$logFormats</pre></a></li>
+<li class="property protected "><a href="#%24object" title="$object :: "><span class="description">$object</span><pre>$object</pre></a></li>
+<li class="property protected "><a href="#%24recordMock" title="$recordMock :: Mock of the ApacheLogRecord to be used in testing"><span class="description">Mock of the ApacheLogRecord to be used in testing</span><pre>$recordMock</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CapacheLogParser%5CApacheLogFileTest" id="\apacheLogParser\ApacheLogFileTest"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/db_apacheLogParser.html">apacheLogParser</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/db_%5CapacheLogParser%5CApacheLogFileTest.html">ApacheLogFileTest</a>
+</li>
+</ul>
+<div href="../classes/db_%5CapacheLogParser%5CApacheLogFileTest.html" class="element class">
+<p class="short_description">Test class for ApacheLogFile.</p>
+<div class="details">
+<p class="long_description"><p>Generated by PHPUnit on 2012-03-22 at 23:51:45.</p></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::__construct()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="addToAssertionCount" id="addToAssertionCount"></a><div class="element clickable method public addToAssertionCount" data-toggle="collapse" data-target=".addToAssertionCount .collapse">
+<h2>addToAssertionCount()
+        </h2>
+<pre>addToAssertionCount() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::addToAssertionCount()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="any" id="any"></a><div class="element clickable method public any" data-toggle="collapse" data-target=".any .collapse">
+<h2>any()
+        </h2>
+<pre>any() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::any()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="anything" id="anything"></a><div class="element clickable method public anything" data-toggle="collapse" data-target=".anything .collapse">
+<h2>anything()
+        </h2>
+<pre>anything() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::anything()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="arrayHasKey" id="arrayHasKey"></a><div class="element clickable method public arrayHasKey" data-toggle="collapse" data-target=".arrayHasKey .collapse">
+<h2>arrayHasKey()
+        </h2>
+<pre>arrayHasKey() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::arrayHasKey()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertArrayHasKey" id="assertArrayHasKey"></a><div class="element clickable method public assertArrayHasKey" data-toggle="collapse" data-target=".assertArrayHasKey .collapse">
+<h2>assertArrayHasKey()
+        </h2>
+<pre>assertArrayHasKey() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertArrayHasKey()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertArrayNotHasKey" id="assertArrayNotHasKey"></a><div class="element clickable method public assertArrayNotHasKey" data-toggle="collapse" data-target=".assertArrayNotHasKey .collapse">
+<h2>assertArrayNotHasKey()
+        </h2>
+<pre>assertArrayNotHasKey() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertArrayNotHasKey()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeContains" id="assertAttributeContains"></a><div class="element clickable method public assertAttributeContains" data-toggle="collapse" data-target=".assertAttributeContains .collapse">
+<h2>assertAttributeContains()
+        </h2>
+<pre>assertAttributeContains() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeContains()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeContainsOnly" id="assertAttributeContainsOnly"></a><div class="element clickable method public assertAttributeContainsOnly" data-toggle="collapse" data-target=".assertAttributeContainsOnly .collapse">
+<h2>assertAttributeContainsOnly()
+        </h2>
+<pre>assertAttributeContainsOnly() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeContainsOnly()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeCount" id="assertAttributeCount"></a><div class="element clickable method public assertAttributeCount" data-toggle="collapse" data-target=".assertAttributeCount .collapse">
+<h2>assertAttributeCount()
+        </h2>
+<pre>assertAttributeCount() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeCount()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeEmpty" id="assertAttributeEmpty"></a><div class="element clickable method public assertAttributeEmpty" data-toggle="collapse" data-target=".assertAttributeEmpty .collapse">
+<h2>assertAttributeEmpty()
+        </h2>
+<pre>assertAttributeEmpty() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeEmpty()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeEquals" id="assertAttributeEquals"></a><div class="element clickable method public assertAttributeEquals" data-toggle="collapse" data-target=".assertAttributeEquals .collapse">
+<h2>assertAttributeEquals()
+        </h2>
+<pre>assertAttributeEquals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeEquals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeGreaterThan" id="assertAttributeGreaterThan"></a><div class="element clickable method public assertAttributeGreaterThan" data-toggle="collapse" data-target=".assertAttributeGreaterThan .collapse">
+<h2>assertAttributeGreaterThan()
+        </h2>
+<pre>assertAttributeGreaterThan() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeGreaterThan()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeGreaterThanOrEqual" id="assertAttributeGreaterThanOrEqual"></a><div class="element clickable method public assertAttributeGreaterThanOrEqual" data-toggle="collapse" data-target=".assertAttributeGreaterThanOrEqual .collapse">
+<h2>assertAttributeGreaterThanOrEqual()
+        </h2>
+<pre>assertAttributeGreaterThanOrEqual() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeGreaterThanOrEqual()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeInstanceOf" id="assertAttributeInstanceOf"></a><div class="element clickable method public assertAttributeInstanceOf" data-toggle="collapse" data-target=".assertAttributeInstanceOf .collapse">
+<h2>assertAttributeInstanceOf()
+        </h2>
+<pre>assertAttributeInstanceOf() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeInstanceOf()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeInternalType" id="assertAttributeInternalType"></a><div class="element clickable method public assertAttributeInternalType" data-toggle="collapse" data-target=".assertAttributeInternalType .collapse">
+<h2>assertAttributeInternalType()
+        </h2>
+<pre>assertAttributeInternalType() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeInternalType()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeLessThan" id="assertAttributeLessThan"></a><div class="element clickable method public assertAttributeLessThan" data-toggle="collapse" data-target=".assertAttributeLessThan .collapse">
+<h2>assertAttributeLessThan()
+        </h2>
+<pre>assertAttributeLessThan() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeLessThan()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeLessThanOrEqual" id="assertAttributeLessThanOrEqual"></a><div class="element clickable method public assertAttributeLessThanOrEqual" data-toggle="collapse" data-target=".assertAttributeLessThanOrEqual .collapse">
+<h2>assertAttributeLessThanOrEqual()
+        </h2>
+<pre>assertAttributeLessThanOrEqual() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeLessThanOrEqual()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeNotContains" id="assertAttributeNotContains"></a><div class="element clickable method public assertAttributeNotContains" data-toggle="collapse" data-target=".assertAttributeNotContains .collapse">
+<h2>assertAttributeNotContains()
+        </h2>
+<pre>assertAttributeNotContains() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeNotContains()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeNotContainsOnly" id="assertAttributeNotContainsOnly"></a><div class="element clickable method public assertAttributeNotContainsOnly" data-toggle="collapse" data-target=".assertAttributeNotContainsOnly .collapse">
+<h2>assertAttributeNotContainsOnly()
+        </h2>
+<pre>assertAttributeNotContainsOnly() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeNotContainsOnly()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeNotCount" id="assertAttributeNotCount"></a><div class="element clickable method public assertAttributeNotCount" data-toggle="collapse" data-target=".assertAttributeNotCount .collapse">
+<h2>assertAttributeNotCount()
+        </h2>
+<pre>assertAttributeNotCount() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeNotCount()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeNotEmpty" id="assertAttributeNotEmpty"></a><div class="element clickable method public assertAttributeNotEmpty" data-toggle="collapse" data-target=".assertAttributeNotEmpty .collapse">
+<h2>assertAttributeNotEmpty()
+        </h2>
+<pre>assertAttributeNotEmpty() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeNotEmpty()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeNotEquals" id="assertAttributeNotEquals"></a><div class="element clickable method public assertAttributeNotEquals" data-toggle="collapse" data-target=".assertAttributeNotEquals .collapse">
+<h2>assertAttributeNotEquals()
+        </h2>
+<pre>assertAttributeNotEquals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeNotEquals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeNotInstanceOf" id="assertAttributeNotInstanceOf"></a><div class="element clickable method public assertAttributeNotInstanceOf" data-toggle="collapse" data-target=".assertAttributeNotInstanceOf .collapse">
+<h2>assertAttributeNotInstanceOf()
+        </h2>
+<pre>assertAttributeNotInstanceOf() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeNotInstanceOf()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeNotInternalType" id="assertAttributeNotInternalType"></a><div class="element clickable method public assertAttributeNotInternalType" data-toggle="collapse" data-target=".assertAttributeNotInternalType .collapse">
+<h2>assertAttributeNotInternalType()
+        </h2>
+<pre>assertAttributeNotInternalType() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeNotInternalType()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeNotSame" id="assertAttributeNotSame"></a><div class="element clickable method public assertAttributeNotSame" data-toggle="collapse" data-target=".assertAttributeNotSame .collapse">
+<h2>assertAttributeNotSame()
+        </h2>
+<pre>assertAttributeNotSame() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeNotSame()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertAttributeSame" id="assertAttributeSame"></a><div class="element clickable method public assertAttributeSame" data-toggle="collapse" data-target=".assertAttributeSame .collapse">
+<h2>assertAttributeSame()
+        </h2>
+<pre>assertAttributeSame() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertAttributeSame()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertClassHasAttribute" id="assertClassHasAttribute"></a><div class="element clickable method public assertClassHasAttribute" data-toggle="collapse" data-target=".assertClassHasAttribute .collapse">
+<h2>assertClassHasAttribute()
+        </h2>
+<pre>assertClassHasAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertClassHasAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertClassHasStaticAttribute" id="assertClassHasStaticAttribute"></a><div class="element clickable method public assertClassHasStaticAttribute" data-toggle="collapse" data-target=".assertClassHasStaticAttribute .collapse">
+<h2>assertClassHasStaticAttribute()
+        </h2>
+<pre>assertClassHasStaticAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertClassHasStaticAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertClassNotHasAttribute" id="assertClassNotHasAttribute"></a><div class="element clickable method public assertClassNotHasAttribute" data-toggle="collapse" data-target=".assertClassNotHasAttribute .collapse">
+<h2>assertClassNotHasAttribute()
+        </h2>
+<pre>assertClassNotHasAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertClassNotHasAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertClassNotHasStaticAttribute" id="assertClassNotHasStaticAttribute"></a><div class="element clickable method public assertClassNotHasStaticAttribute" data-toggle="collapse" data-target=".assertClassNotHasStaticAttribute .collapse">
+<h2>assertClassNotHasStaticAttribute()
+        </h2>
+<pre>assertClassNotHasStaticAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertClassNotHasStaticAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertContains" id="assertContains"></a><div class="element clickable method public assertContains" data-toggle="collapse" data-target=".assertContains .collapse">
+<h2>assertContains()
+        </h2>
+<pre>assertContains() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertContains()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertContainsOnly" id="assertContainsOnly"></a><div class="element clickable method public assertContainsOnly" data-toggle="collapse" data-target=".assertContainsOnly .collapse">
+<h2>assertContainsOnly()
+        </h2>
+<pre>assertContainsOnly() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertContainsOnly()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertCount" id="assertCount"></a><div class="element clickable method public assertCount" data-toggle="collapse" data-target=".assertCount .collapse">
+<h2>assertCount()
+        </h2>
+<pre>assertCount() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertCount()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertEmpty" id="assertEmpty"></a><div class="element clickable method public assertEmpty" data-toggle="collapse" data-target=".assertEmpty .collapse">
+<h2>assertEmpty()
+        </h2>
+<pre>assertEmpty() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertEmpty()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertEqualXMLStructure" id="assertEqualXMLStructure"></a><div class="element clickable method public assertEqualXMLStructure" data-toggle="collapse" data-target=".assertEqualXMLStructure .collapse">
+<h2>assertEqualXMLStructure()
+        </h2>
+<pre>assertEqualXMLStructure() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertEqualXMLStructure()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertEquals" id="assertEquals"></a><div class="element clickable method public assertEquals" data-toggle="collapse" data-target=".assertEquals .collapse">
+<h2>assertEquals()
+        </h2>
+<pre>assertEquals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertEquals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertFalse" id="assertFalse"></a><div class="element clickable method public assertFalse" data-toggle="collapse" data-target=".assertFalse .collapse">
+<h2>assertFalse()
+        </h2>
+<pre>assertFalse() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertFalse()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertFileEquals" id="assertFileEquals"></a><div class="element clickable method public assertFileEquals" data-toggle="collapse" data-target=".assertFileEquals .collapse">
+<h2>assertFileEquals()
+        </h2>
+<pre>assertFileEquals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertFileEquals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertFileExists" id="assertFileExists"></a><div class="element clickable method public assertFileExists" data-toggle="collapse" data-target=".assertFileExists .collapse">
+<h2>assertFileExists()
+        </h2>
+<pre>assertFileExists() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertFileExists()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertFileNotEquals" id="assertFileNotEquals"></a><div class="element clickable method public assertFileNotEquals" data-toggle="collapse" data-target=".assertFileNotEquals .collapse">
+<h2>assertFileNotEquals()
+        </h2>
+<pre>assertFileNotEquals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertFileNotEquals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertFileNotExists" id="assertFileNotExists"></a><div class="element clickable method public assertFileNotExists" data-toggle="collapse" data-target=".assertFileNotExists .collapse">
+<h2>assertFileNotExists()
+        </h2>
+<pre>assertFileNotExists() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertFileNotExists()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertGreaterThan" id="assertGreaterThan"></a><div class="element clickable method public assertGreaterThan" data-toggle="collapse" data-target=".assertGreaterThan .collapse">
+<h2>assertGreaterThan()
+        </h2>
+<pre>assertGreaterThan() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertGreaterThan()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertGreaterThanOrEqual" id="assertGreaterThanOrEqual"></a><div class="element clickable method public assertGreaterThanOrEqual" data-toggle="collapse" data-target=".assertGreaterThanOrEqual .collapse">
+<h2>assertGreaterThanOrEqual()
+        </h2>
+<pre>assertGreaterThanOrEqual() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertGreaterThanOrEqual()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertInstanceOf" id="assertInstanceOf"></a><div class="element clickable method public assertInstanceOf" data-toggle="collapse" data-target=".assertInstanceOf .collapse">
+<h2>assertInstanceOf()
+        </h2>
+<pre>assertInstanceOf() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertInstanceOf()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertInternalType" id="assertInternalType"></a><div class="element clickable method public assertInternalType" data-toggle="collapse" data-target=".assertInternalType .collapse">
+<h2>assertInternalType()
+        </h2>
+<pre>assertInternalType() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertInternalType()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertLessThan" id="assertLessThan"></a><div class="element clickable method public assertLessThan" data-toggle="collapse" data-target=".assertLessThan .collapse">
+<h2>assertLessThan()
+        </h2>
+<pre>assertLessThan() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertLessThan()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertLessThanOrEqual" id="assertLessThanOrEqual"></a><div class="element clickable method public assertLessThanOrEqual" data-toggle="collapse" data-target=".assertLessThanOrEqual .collapse">
+<h2>assertLessThanOrEqual()
+        </h2>
+<pre>assertLessThanOrEqual() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertLessThanOrEqual()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotContains" id="assertNotContains"></a><div class="element clickable method public assertNotContains" data-toggle="collapse" data-target=".assertNotContains .collapse">
+<h2>assertNotContains()
+        </h2>
+<pre>assertNotContains() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotContains()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotContainsOnly" id="assertNotContainsOnly"></a><div class="element clickable method public assertNotContainsOnly" data-toggle="collapse" data-target=".assertNotContainsOnly .collapse">
+<h2>assertNotContainsOnly()
+        </h2>
+<pre>assertNotContainsOnly() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotContainsOnly()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotCount" id="assertNotCount"></a><div class="element clickable method public assertNotCount" data-toggle="collapse" data-target=".assertNotCount .collapse">
+<h2>assertNotCount()
+        </h2>
+<pre>assertNotCount() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotCount()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotEmpty" id="assertNotEmpty"></a><div class="element clickable method public assertNotEmpty" data-toggle="collapse" data-target=".assertNotEmpty .collapse">
+<h2>assertNotEmpty()
+        </h2>
+<pre>assertNotEmpty() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotEmpty()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotEquals" id="assertNotEquals"></a><div class="element clickable method public assertNotEquals" data-toggle="collapse" data-target=".assertNotEquals .collapse">
+<h2>assertNotEquals()
+        </h2>
+<pre>assertNotEquals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotEquals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotInstanceOf" id="assertNotInstanceOf"></a><div class="element clickable method public assertNotInstanceOf" data-toggle="collapse" data-target=".assertNotInstanceOf .collapse">
+<h2>assertNotInstanceOf()
+        </h2>
+<pre>assertNotInstanceOf() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotInstanceOf()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotInternalType" id="assertNotInternalType"></a><div class="element clickable method public assertNotInternalType" data-toggle="collapse" data-target=".assertNotInternalType .collapse">
+<h2>assertNotInternalType()
+        </h2>
+<pre>assertNotInternalType() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotInternalType()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotNull" id="assertNotNull"></a><div class="element clickable method public assertNotNull" data-toggle="collapse" data-target=".assertNotNull .collapse">
+<h2>assertNotNull()
+        </h2>
+<pre>assertNotNull() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotNull()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotRegExp" id="assertNotRegExp"></a><div class="element clickable method public assertNotRegExp" data-toggle="collapse" data-target=".assertNotRegExp .collapse">
+<h2>assertNotRegExp()
+        </h2>
+<pre>assertNotRegExp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotRegExp()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotSame" id="assertNotSame"></a><div class="element clickable method public assertNotSame" data-toggle="collapse" data-target=".assertNotSame .collapse">
+<h2>assertNotSame()
+        </h2>
+<pre>assertNotSame() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotSame()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotSameSize" id="assertNotSameSize"></a><div class="element clickable method public assertNotSameSize" data-toggle="collapse" data-target=".assertNotSameSize .collapse">
+<h2>assertNotSameSize()
+        </h2>
+<pre>assertNotSameSize() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotSameSize()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNotTag" id="assertNotTag"></a><div class="element clickable method public assertNotTag" data-toggle="collapse" data-target=".assertNotTag .collapse">
+<h2>assertNotTag()
+        </h2>
+<pre>assertNotTag() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNotTag()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertNull" id="assertNull"></a><div class="element clickable method public assertNull" data-toggle="collapse" data-target=".assertNull .collapse">
+<h2>assertNull()
+        </h2>
+<pre>assertNull() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertNull()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertObjectHasAttribute" id="assertObjectHasAttribute"></a><div class="element clickable method public assertObjectHasAttribute" data-toggle="collapse" data-target=".assertObjectHasAttribute .collapse">
+<h2>assertObjectHasAttribute()
+        </h2>
+<pre>assertObjectHasAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertObjectHasAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertObjectNotHasAttribute" id="assertObjectNotHasAttribute"></a><div class="element clickable method public assertObjectNotHasAttribute" data-toggle="collapse" data-target=".assertObjectNotHasAttribute .collapse">
+<h2>assertObjectNotHasAttribute()
+        </h2>
+<pre>assertObjectNotHasAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertObjectNotHasAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertRegExp" id="assertRegExp"></a><div class="element clickable method public assertRegExp" data-toggle="collapse" data-target=".assertRegExp .collapse">
+<h2>assertRegExp()
+        </h2>
+<pre>assertRegExp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertRegExp()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertSame" id="assertSame"></a><div class="element clickable method public assertSame" data-toggle="collapse" data-target=".assertSame .collapse">
+<h2>assertSame()
+        </h2>
+<pre>assertSame() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertSame()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertSameSize" id="assertSameSize"></a><div class="element clickable method public assertSameSize" data-toggle="collapse" data-target=".assertSameSize .collapse">
+<h2>assertSameSize()
+        </h2>
+<pre>assertSameSize() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertSameSize()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertSelectCount" id="assertSelectCount"></a><div class="element clickable method public assertSelectCount" data-toggle="collapse" data-target=".assertSelectCount .collapse">
+<h2>assertSelectCount()
+        </h2>
+<pre>assertSelectCount() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertSelectCount()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertSelectEquals" id="assertSelectEquals"></a><div class="element clickable method public assertSelectEquals" data-toggle="collapse" data-target=".assertSelectEquals .collapse">
+<h2>assertSelectEquals()
+        </h2>
+<pre>assertSelectEquals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertSelectEquals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertSelectRegExp" id="assertSelectRegExp"></a><div class="element clickable method public assertSelectRegExp" data-toggle="collapse" data-target=".assertSelectRegExp .collapse">
+<h2>assertSelectRegExp()
+        </h2>
+<pre>assertSelectRegExp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertSelectRegExp()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringEndsNotWith" id="assertStringEndsNotWith"></a><div class="element clickable method public assertStringEndsNotWith" data-toggle="collapse" data-target=".assertStringEndsNotWith .collapse">
+<h2>assertStringEndsNotWith()
+        </h2>
+<pre>assertStringEndsNotWith() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringEndsNotWith()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringEndsWith" id="assertStringEndsWith"></a><div class="element clickable method public assertStringEndsWith" data-toggle="collapse" data-target=".assertStringEndsWith .collapse">
+<h2>assertStringEndsWith()
+        </h2>
+<pre>assertStringEndsWith() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringEndsWith()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringEqualsFile" id="assertStringEqualsFile"></a><div class="element clickable method public assertStringEqualsFile" data-toggle="collapse" data-target=".assertStringEqualsFile .collapse">
+<h2>assertStringEqualsFile()
+        </h2>
+<pre>assertStringEqualsFile() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringEqualsFile()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringMatchesFormat" id="assertStringMatchesFormat"></a><div class="element clickable method public assertStringMatchesFormat" data-toggle="collapse" data-target=".assertStringMatchesFormat .collapse">
+<h2>assertStringMatchesFormat()
+        </h2>
+<pre>assertStringMatchesFormat() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringMatchesFormat()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringMatchesFormatFile" id="assertStringMatchesFormatFile"></a><div class="element clickable method public assertStringMatchesFormatFile" data-toggle="collapse" data-target=".assertStringMatchesFormatFile .collapse">
+<h2>assertStringMatchesFormatFile()
+        </h2>
+<pre>assertStringMatchesFormatFile() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringMatchesFormatFile()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringNotEqualsFile" id="assertStringNotEqualsFile"></a><div class="element clickable method public assertStringNotEqualsFile" data-toggle="collapse" data-target=".assertStringNotEqualsFile .collapse">
+<h2>assertStringNotEqualsFile()
+        </h2>
+<pre>assertStringNotEqualsFile() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringNotEqualsFile()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringNotMatchesFormat" id="assertStringNotMatchesFormat"></a><div class="element clickable method public assertStringNotMatchesFormat" data-toggle="collapse" data-target=".assertStringNotMatchesFormat .collapse">
+<h2>assertStringNotMatchesFormat()
+        </h2>
+<pre>assertStringNotMatchesFormat() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringNotMatchesFormat()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringNotMatchesFormatFile" id="assertStringNotMatchesFormatFile"></a><div class="element clickable method public assertStringNotMatchesFormatFile" data-toggle="collapse" data-target=".assertStringNotMatchesFormatFile .collapse">
+<h2>assertStringNotMatchesFormatFile()
+        </h2>
+<pre>assertStringNotMatchesFormatFile() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringNotMatchesFormatFile()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringStartsNotWith" id="assertStringStartsNotWith"></a><div class="element clickable method public assertStringStartsNotWith" data-toggle="collapse" data-target=".assertStringStartsNotWith .collapse">
+<h2>assertStringStartsNotWith()
+        </h2>
+<pre>assertStringStartsNotWith() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringStartsNotWith()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertStringStartsWith" id="assertStringStartsWith"></a><div class="element clickable method public assertStringStartsWith" data-toggle="collapse" data-target=".assertStringStartsWith .collapse">
+<h2>assertStringStartsWith()
+        </h2>
+<pre>assertStringStartsWith() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertStringStartsWith()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertTag" id="assertTag"></a><div class="element clickable method public assertTag" data-toggle="collapse" data-target=".assertTag .collapse">
+<h2>assertTag()
+        </h2>
+<pre>assertTag() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertTag()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertThat" id="assertThat"></a><div class="element clickable method public assertThat" data-toggle="collapse" data-target=".assertThat .collapse">
+<h2>assertThat()
+        </h2>
+<pre>assertThat() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertThat()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertTrue" id="assertTrue"></a><div class="element clickable method public assertTrue" data-toggle="collapse" data-target=".assertTrue .collapse">
+<h2>assertTrue()
+        </h2>
+<pre>assertTrue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertTrue()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertXmlFileEqualsXmlFile" id="assertXmlFileEqualsXmlFile"></a><div class="element clickable method public assertXmlFileEqualsXmlFile" data-toggle="collapse" data-target=".assertXmlFileEqualsXmlFile .collapse">
+<h2>assertXmlFileEqualsXmlFile()
+        </h2>
+<pre>assertXmlFileEqualsXmlFile() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertXmlFileEqualsXmlFile()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertXmlFileNotEqualsXmlFile" id="assertXmlFileNotEqualsXmlFile"></a><div class="element clickable method public assertXmlFileNotEqualsXmlFile" data-toggle="collapse" data-target=".assertXmlFileNotEqualsXmlFile .collapse">
+<h2>assertXmlFileNotEqualsXmlFile()
+        </h2>
+<pre>assertXmlFileNotEqualsXmlFile() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertXmlFileNotEqualsXmlFile()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertXmlStringEqualsXmlFile" id="assertXmlStringEqualsXmlFile"></a><div class="element clickable method public assertXmlStringEqualsXmlFile" data-toggle="collapse" data-target=".assertXmlStringEqualsXmlFile .collapse">
+<h2>assertXmlStringEqualsXmlFile()
+        </h2>
+<pre>assertXmlStringEqualsXmlFile() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertXmlStringEqualsXmlFile()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertXmlStringEqualsXmlString" id="assertXmlStringEqualsXmlString"></a><div class="element clickable method public assertXmlStringEqualsXmlString" data-toggle="collapse" data-target=".assertXmlStringEqualsXmlString .collapse">
+<h2>assertXmlStringEqualsXmlString()
+        </h2>
+<pre>assertXmlStringEqualsXmlString() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertXmlStringEqualsXmlString()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertXmlStringNotEqualsXmlFile" id="assertXmlStringNotEqualsXmlFile"></a><div class="element clickable method public assertXmlStringNotEqualsXmlFile" data-toggle="collapse" data-target=".assertXmlStringNotEqualsXmlFile .collapse">
+<h2>assertXmlStringNotEqualsXmlFile()
+        </h2>
+<pre>assertXmlStringNotEqualsXmlFile() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertXmlStringNotEqualsXmlFile()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertXmlStringNotEqualsXmlString" id="assertXmlStringNotEqualsXmlString"></a><div class="element clickable method public assertXmlStringNotEqualsXmlString" data-toggle="collapse" data-target=".assertXmlStringNotEqualsXmlString .collapse">
+<h2>assertXmlStringNotEqualsXmlString()
+        </h2>
+<pre>assertXmlStringNotEqualsXmlString() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::assertXmlStringNotEqualsXmlString()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="at" id="at"></a><div class="element clickable method public at" data-toggle="collapse" data-target=".at .collapse">
+<h2>at()
+        </h2>
+<pre>at() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::at()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="atLeastOnce" id="atLeastOnce"></a><div class="element clickable method public atLeastOnce" data-toggle="collapse" data-target=".atLeastOnce .collapse">
+<h2>atLeastOnce()
+        </h2>
+<pre>atLeastOnce() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::atLeastOnce()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="attribute" id="attribute"></a><div class="element clickable method public attribute" data-toggle="collapse" data-target=".attribute .collapse">
+<h2>attribute()
+        </h2>
+<pre>attribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::attribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="attributeEqualTo" id="attributeEqualTo"></a><div class="element clickable method public attributeEqualTo" data-toggle="collapse" data-target=".attributeEqualTo .collapse">
+<h2>attributeEqualTo()
+        </h2>
+<pre>attributeEqualTo() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::attributeEqualTo()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="classHasAttribute" id="classHasAttribute"></a><div class="element clickable method public classHasAttribute" data-toggle="collapse" data-target=".classHasAttribute .collapse">
+<h2>classHasAttribute()
+        </h2>
+<pre>classHasAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::classHasAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="classHasStaticAttribute" id="classHasStaticAttribute"></a><div class="element clickable method public classHasStaticAttribute" data-toggle="collapse" data-target=".classHasStaticAttribute .collapse">
+<h2>classHasStaticAttribute()
+        </h2>
+<pre>classHasStaticAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::classHasStaticAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="contains" id="contains"></a><div class="element clickable method public contains" data-toggle="collapse" data-target=".contains .collapse">
+<h2>contains()
+        </h2>
+<pre>contains() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::contains()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="containsOnly" id="containsOnly"></a><div class="element clickable method public containsOnly" data-toggle="collapse" data-target=".containsOnly .collapse">
+<h2>containsOnly()
+        </h2>
+<pre>containsOnly() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::containsOnly()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="count" id="count"></a><div class="element clickable method public count" data-toggle="collapse" data-target=".count .collapse">
+<h2>count()
+        </h2>
+<pre>count() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::count()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="equalTo" id="equalTo"></a><div class="element clickable method public equalTo" data-toggle="collapse" data-target=".equalTo .collapse">
+<h2>equalTo()
+        </h2>
+<pre>equalTo() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::equalTo()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="exactly" id="exactly"></a><div class="element clickable method public exactly" data-toggle="collapse" data-target=".exactly .collapse">
+<h2>exactly()
+        </h2>
+<pre>exactly() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::exactly()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="expectOutputRegex" id="expectOutputRegex"></a><div class="element clickable method public expectOutputRegex" data-toggle="collapse" data-target=".expectOutputRegex .collapse">
+<h2>expectOutputRegex()
+        </h2>
+<pre>expectOutputRegex() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::expectOutputRegex()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="expectOutputString" id="expectOutputString"></a><div class="element clickable method public expectOutputString" data-toggle="collapse" data-target=".expectOutputString .collapse">
+<h2>expectOutputString()
+        </h2>
+<pre>expectOutputString() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::expectOutputString()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="fail" id="fail"></a><div class="element clickable method public fail" data-toggle="collapse" data-target=".fail .collapse">
+<h2>fail()
+        </h2>
+<pre>fail() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::fail()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="fileExists" id="fileExists"></a><div class="element clickable method public fileExists" data-toggle="collapse" data-target=".fileExists .collapse">
+<h2>fileExists()
+        </h2>
+<pre>fileExists() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::fileExists()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getActualOutput" id="getActualOutput"></a><div class="element clickable method public getActualOutput" data-toggle="collapse" data-target=".getActualOutput .collapse">
+<h2>getActualOutput()
+        </h2>
+<pre>getActualOutput() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getActualOutput()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getAnnotations" id="getAnnotations"></a><div class="element clickable method public getAnnotations" data-toggle="collapse" data-target=".getAnnotations .collapse">
+<h2>getAnnotations()
+        </h2>
+<pre>getAnnotations() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getAnnotations()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getCount" id="getCount"></a><div class="element clickable method public getCount" data-toggle="collapse" data-target=".getCount .collapse">
+<h2>getCount()
+        </h2>
+<pre>getCount() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::getCount()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getExpectedException" id="getExpectedException"></a><div class="element clickable method public getExpectedException" data-toggle="collapse" data-target=".getExpectedException .collapse">
+<h2>getExpectedException()
+        </h2>
+<pre>getExpectedException() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getExpectedException()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getMock" id="getMock"></a><div class="element clickable method public getMock" data-toggle="collapse" data-target=".getMock .collapse">
+<h2>getMock()
+        </h2>
+<pre>getMock() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getMock()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getMockBuilder" id="getMockBuilder"></a><div class="element clickable method public getMockBuilder" data-toggle="collapse" data-target=".getMockBuilder .collapse">
+<h2>getMockBuilder()
+        </h2>
+<pre>getMockBuilder() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getMockBuilder()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getMockForAbstractClass" id="getMockForAbstractClass"></a><div class="element clickable method public getMockForAbstractClass" data-toggle="collapse" data-target=".getMockForAbstractClass .collapse">
+<h2>getMockForAbstractClass()
+        </h2>
+<pre>getMockForAbstractClass() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getMockForAbstractClass()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getName" id="getName"></a><div class="element clickable method public getName" data-toggle="collapse" data-target=".getName .collapse">
+<h2>getName()
+        </h2>
+<pre>getName() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getName()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getNumAssertions" id="getNumAssertions"></a><div class="element clickable method public getNumAssertions" data-toggle="collapse" data-target=".getNumAssertions .collapse">
+<h2>getNumAssertions()
+        </h2>
+<pre>getNumAssertions() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getNumAssertions()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getResult" id="getResult"></a><div class="element clickable method public getResult" data-toggle="collapse" data-target=".getResult .collapse">
+<h2>getResult()
+        </h2>
+<pre>getResult() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getResult()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getSize" id="getSize"></a><div class="element clickable method public getSize" data-toggle="collapse" data-target=".getSize .collapse">
+<h2>getSize()
+        </h2>
+<pre>getSize() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getSize()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getStatus" id="getStatus"></a><div class="element clickable method public getStatus" data-toggle="collapse" data-target=".getStatus .collapse">
+<h2>getStatus()
+        </h2>
+<pre>getStatus() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getStatus()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getStatusMessage" id="getStatusMessage"></a><div class="element clickable method public getStatusMessage" data-toggle="collapse" data-target=".getStatusMessage .collapse">
+<h2>getStatusMessage()
+        </h2>
+<pre>getStatusMessage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getStatusMessage()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getTestResultObject" id="getTestResultObject"></a><div class="element clickable method public getTestResultObject" data-toggle="collapse" data-target=".getTestResultObject .collapse">
+<h2>getTestResultObject()
+        </h2>
+<pre>getTestResultObject() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getTestResultObject()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="greaterThan" id="greaterThan"></a><div class="element clickable method public greaterThan" data-toggle="collapse" data-target=".greaterThan .collapse">
+<h2>greaterThan()
+        </h2>
+<pre>greaterThan() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::greaterThan()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="greaterThanOrEqual" id="greaterThanOrEqual"></a><div class="element clickable method public greaterThanOrEqual" data-toggle="collapse" data-target=".greaterThanOrEqual .collapse">
+<h2>greaterThanOrEqual()
+        </h2>
+<pre>greaterThanOrEqual() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::greaterThanOrEqual()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="hasFailed" id="hasFailed"></a><div class="element clickable method public hasFailed" data-toggle="collapse" data-target=".hasFailed .collapse">
+<h2>hasFailed()
+        </h2>
+<pre>hasFailed() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::hasFailed()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="hasOutput" id="hasOutput"></a><div class="element clickable method public hasOutput" data-toggle="collapse" data-target=".hasOutput .collapse">
+<h2>hasOutput()
+        </h2>
+<pre>hasOutput() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::hasOutput()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="hasPerformedExpectationsOnOutput" id="hasPerformedExpectationsOnOutput"></a><div class="element clickable method public hasPerformedExpectationsOnOutput" data-toggle="collapse" data-target=".hasPerformedExpectationsOnOutput .collapse">
+<h2>hasPerformedExpectationsOnOutput()
+        </h2>
+<pre>hasPerformedExpectationsOnOutput() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::hasPerformedExpectationsOnOutput()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="identicalTo" id="identicalTo"></a><div class="element clickable method public identicalTo" data-toggle="collapse" data-target=".identicalTo .collapse">
+<h2>identicalTo()
+        </h2>
+<pre>identicalTo() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::identicalTo()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="isEmpty" id="isEmpty"></a><div class="element clickable method public isEmpty" data-toggle="collapse" data-target=".isEmpty .collapse">
+<h2>isEmpty()
+        </h2>
+<pre>isEmpty() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::isEmpty()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="isFalse" id="isFalse"></a><div class="element clickable method public isFalse" data-toggle="collapse" data-target=".isFalse .collapse">
+<h2>isFalse()
+        </h2>
+<pre>isFalse() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::isFalse()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="isInstanceOf" id="isInstanceOf"></a><div class="element clickable method public isInstanceOf" data-toggle="collapse" data-target=".isInstanceOf .collapse">
+<h2>isInstanceOf()
+        </h2>
+<pre>isInstanceOf() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::isInstanceOf()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="isNull" id="isNull"></a><div class="element clickable method public isNull" data-toggle="collapse" data-target=".isNull .collapse">
+<h2>isNull()
+        </h2>
+<pre>isNull() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::isNull()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="isTrue" id="isTrue"></a><div class="element clickable method public isTrue" data-toggle="collapse" data-target=".isTrue .collapse">
+<h2>isTrue()
+        </h2>
+<pre>isTrue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::isTrue()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="isType" id="isType"></a><div class="element clickable method public isType" data-toggle="collapse" data-target=".isType .collapse">
+<h2>isType()
+        </h2>
+<pre>isType() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::isType()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="lessThan" id="lessThan"></a><div class="element clickable method public lessThan" data-toggle="collapse" data-target=".lessThan .collapse">
+<h2>lessThan()
+        </h2>
+<pre>lessThan() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::lessThan()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="lessThanOrEqual" id="lessThanOrEqual"></a><div class="element clickable method public lessThanOrEqual" data-toggle="collapse" data-target=".lessThanOrEqual .collapse">
+<h2>lessThanOrEqual()
+        </h2>
+<pre>lessThanOrEqual() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::lessThanOrEqual()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="logicalAnd" id="logicalAnd"></a><div class="element clickable method public logicalAnd" data-toggle="collapse" data-target=".logicalAnd .collapse">
+<h2>logicalAnd()
+        </h2>
+<pre>logicalAnd() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::logicalAnd()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="logicalNot" id="logicalNot"></a><div class="element clickable method public logicalNot" data-toggle="collapse" data-target=".logicalNot .collapse">
+<h2>logicalNot()
+        </h2>
+<pre>logicalNot() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::logicalNot()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="logicalOr" id="logicalOr"></a><div class="element clickable method public logicalOr" data-toggle="collapse" data-target=".logicalOr .collapse">
+<h2>logicalOr()
+        </h2>
+<pre>logicalOr() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::logicalOr()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="logicalXor" id="logicalXor"></a><div class="element clickable method public logicalXor" data-toggle="collapse" data-target=".logicalXor .collapse">
+<h2>logicalXor()
+        </h2>
+<pre>logicalXor() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::logicalXor()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="markTestIncomplete" id="markTestIncomplete"></a><div class="element clickable method public markTestIncomplete" data-toggle="collapse" data-target=".markTestIncomplete .collapse">
+<h2>markTestIncomplete()
+        </h2>
+<pre>markTestIncomplete() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::markTestIncomplete()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="markTestSkipped" id="markTestSkipped"></a><div class="element clickable method public markTestSkipped" data-toggle="collapse" data-target=".markTestSkipped .collapse">
+<h2>markTestSkipped()
+        </h2>
+<pre>markTestSkipped() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::markTestSkipped()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="matches" id="matches"></a><div class="element clickable method public matches" data-toggle="collapse" data-target=".matches .collapse">
+<h2>matches()
+        </h2>
+<pre>matches() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::matches()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="matchesRegularExpression" id="matchesRegularExpression"></a><div class="element clickable method public matchesRegularExpression" data-toggle="collapse" data-target=".matchesRegularExpression .collapse">
+<h2>matchesRegularExpression()
+        </h2>
+<pre>matchesRegularExpression() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::matchesRegularExpression()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="never" id="never"></a><div class="element clickable method public never" data-toggle="collapse" data-target=".never .collapse">
+<h2>never()
+        </h2>
+<pre>never() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::never()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="objectHasAttribute" id="objectHasAttribute"></a><div class="element clickable method public objectHasAttribute" data-toggle="collapse" data-target=".objectHasAttribute .collapse">
+<h2>objectHasAttribute()
+        </h2>
+<pre>objectHasAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::objectHasAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="onConsecutiveCalls" id="onConsecutiveCalls"></a><div class="element clickable method public onConsecutiveCalls" data-toggle="collapse" data-target=".onConsecutiveCalls .collapse">
+<h2>onConsecutiveCalls()
+        </h2>
+<pre>onConsecutiveCalls() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::onConsecutiveCalls()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="once" id="once"></a><div class="element clickable method public once" data-toggle="collapse" data-target=".once .collapse">
+<h2>once()
+        </h2>
+<pre>once() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::once()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="readAttribute" id="readAttribute"></a><div class="element clickable method public readAttribute" data-toggle="collapse" data-target=".readAttribute .collapse">
+<h2>readAttribute()
+        </h2>
+<pre>readAttribute() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::readAttribute()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="resetCount" id="resetCount"></a><div class="element clickable method public resetCount" data-toggle="collapse" data-target=".resetCount .collapse">
+<h2>resetCount()
+        </h2>
+<pre>resetCount() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::resetCount()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="returnArgument" id="returnArgument"></a><div class="element clickable method public returnArgument" data-toggle="collapse" data-target=".returnArgument .collapse">
+<h2>returnArgument()
+        </h2>
+<pre>returnArgument() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::returnArgument()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="returnCallback" id="returnCallback"></a><div class="element clickable method public returnCallback" data-toggle="collapse" data-target=".returnCallback .collapse">
+<h2>returnCallback()
+        </h2>
+<pre>returnCallback() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::returnCallback()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="returnSelf" id="returnSelf"></a><div class="element clickable method public returnSelf" data-toggle="collapse" data-target=".returnSelf .collapse">
+<h2>returnSelf()
+        </h2>
+<pre>returnSelf() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::returnSelf()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="returnValue" id="returnValue"></a><div class="element clickable method public returnValue" data-toggle="collapse" data-target=".returnValue .collapse">
+<h2>returnValue()
+        </h2>
+<pre>returnValue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::returnValue()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="returnValueMap" id="returnValueMap"></a><div class="element clickable method public returnValueMap" data-toggle="collapse" data-target=".returnValueMap .collapse">
+<h2>returnValueMap()
+        </h2>
+<pre>returnValueMap() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::returnValueMap()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="run" id="run"></a><div class="element clickable method public run" data-toggle="collapse" data-target=".run .collapse">
+<h2>run()
+        </h2>
+<pre>run() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::run()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="runBare" id="runBare"></a><div class="element clickable method public runBare" data-toggle="collapse" data-target=".runBare .collapse">
+<h2>runBare()
+        </h2>
+<pre>runBare() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::runBare()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setBackupGlobals" id="setBackupGlobals"></a><div class="element clickable method public setBackupGlobals" data-toggle="collapse" data-target=".setBackupGlobals .collapse">
+<h2>setBackupGlobals()
+        </h2>
+<pre>setBackupGlobals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setBackupGlobals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setBackupStaticAttributes" id="setBackupStaticAttributes"></a><div class="element clickable method public setBackupStaticAttributes" data-toggle="collapse" data-target=".setBackupStaticAttributes .collapse">
+<h2>setBackupStaticAttributes()
+        </h2>
+<pre>setBackupStaticAttributes() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setBackupStaticAttributes()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setDependencies" id="setDependencies"></a><div class="element clickable method public setDependencies" data-toggle="collapse" data-target=".setDependencies .collapse">
+<h2>setDependencies()
+        </h2>
+<pre>setDependencies() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setDependencies()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setDependencyInput" id="setDependencyInput"></a><div class="element clickable method public setDependencyInput" data-toggle="collapse" data-target=".setDependencyInput .collapse">
+<h2>setDependencyInput()
+        </h2>
+<pre>setDependencyInput() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setDependencyInput()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setExpectedException" id="setExpectedException"></a><div class="element clickable method public setExpectedException" data-toggle="collapse" data-target=".setExpectedException .collapse">
+<h2>setExpectedException()
+        </h2>
+<pre>setExpectedException() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setExpectedException()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setInIsolation" id="setInIsolation"></a><div class="element clickable method public setInIsolation" data-toggle="collapse" data-target=".setInIsolation .collapse">
+<h2>setInIsolation()
+        </h2>
+<pre>setInIsolation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setInIsolation()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setName" id="setName"></a><div class="element clickable method public setName" data-toggle="collapse" data-target=".setName .collapse">
+<h2>setName()
+        </h2>
+<pre>setName() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setName()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setOutputCallback" id="setOutputCallback"></a><div class="element clickable method public setOutputCallback" data-toggle="collapse" data-target=".setOutputCallback .collapse">
+<h2>setOutputCallback()
+        </h2>
+<pre>setOutputCallback() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setOutputCallback()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setPreserveGlobalState" id="setPreserveGlobalState"></a><div class="element clickable method public setPreserveGlobalState" data-toggle="collapse" data-target=".setPreserveGlobalState .collapse">
+<h2>setPreserveGlobalState()
+        </h2>
+<pre>setPreserveGlobalState() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setPreserveGlobalState()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setResult" id="setResult"></a><div class="element clickable method public setResult" data-toggle="collapse" data-target=".setResult .collapse">
+<h2>setResult()
+        </h2>
+<pre>setResult() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setResult()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setRunTestInSeparateProcess" id="setRunTestInSeparateProcess"></a><div class="element clickable method public setRunTestInSeparateProcess" data-toggle="collapse" data-target=".setRunTestInSeparateProcess .collapse">
+<h2>setRunTestInSeparateProcess()
+        </h2>
+<pre>setRunTestInSeparateProcess() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setRunTestInSeparateProcess()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setTestResultObject" id="setTestResultObject"></a><div class="element clickable method public setTestResultObject" data-toggle="collapse" data-target=".setTestResultObject .collapse">
+<h2>setTestResultObject()
+        </h2>
+<pre>setTestResultObject() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setTestResultObject()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setUpBeforeClass" id="setUpBeforeClass"></a><div class="element clickable method public setUpBeforeClass" data-toggle="collapse" data-target=".setUpBeforeClass .collapse">
+<h2>setUpBeforeClass()
+        </h2>
+<pre>setUpBeforeClass() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setUpBeforeClass()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setUseErrorHandler" id="setUseErrorHandler"></a><div class="element clickable method public setUseErrorHandler" data-toggle="collapse" data-target=".setUseErrorHandler .collapse">
+<h2>setUseErrorHandler()
+        </h2>
+<pre>setUseErrorHandler() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setUseErrorHandler()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setUseOutputBuffering" id="setUseOutputBuffering"></a><div class="element clickable method public setUseOutputBuffering" data-toggle="collapse" data-target=".setUseOutputBuffering .collapse">
+<h2>setUseOutputBuffering()
+        </h2>
+<pre>setUseOutputBuffering() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setUseOutputBuffering()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="stringContains" id="stringContains"></a><div class="element clickable method public stringContains" data-toggle="collapse" data-target=".stringContains .collapse">
+<h2>stringContains()
+        </h2>
+<pre>stringContains() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::stringContains()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="stringEndsWith" id="stringEndsWith"></a><div class="element clickable method public stringEndsWith" data-toggle="collapse" data-target=".stringEndsWith .collapse">
+<h2>stringEndsWith()
+        </h2>
+<pre>stringEndsWith() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::stringEndsWith()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="stringStartsWith" id="stringStartsWith"></a><div class="element clickable method public stringStartsWith" data-toggle="collapse" data-target=".stringStartsWith .collapse">
+<h2>stringStartsWith()
+        </h2>
+<pre>stringStartsWith() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_Assert::stringStartsWith()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="tearDownAfterClass" id="tearDownAfterClass"></a><div class="element clickable method public tearDownAfterClass" data-toggle="collapse" data-target=".tearDownAfterClass .collapse">
+<h2>tearDownAfterClass()
+        </h2>
+<pre>tearDownAfterClass() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::tearDownAfterClass()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="teardown" id="teardown"></a><div class="element clickable method public teardown" data-toggle="collapse" data-target=".teardown .collapse">
+<h2>teardown()
+        </h2>
+<pre>teardown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="testConvertFormatToRegExAllSegmented" id="testConvertFormatToRegExAllSegmented"></a><div class="element clickable method public testConvertFormatToRegExAllSegmented" data-toggle="collapse" data-target=".testConvertFormatToRegExAllSegmented .collapse">
+<h2>testConvertFormatToRegExAllSegmented()
+        </h2>
+<pre>testConvertFormatToRegExAllSegmented() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testProcessApacheLogCommandSegments</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testConvertFormatToRegExAllStandard" id="testConvertFormatToRegExAllStandard"></a><div class="element clickable method public testConvertFormatToRegExAllStandard" data-toggle="collapse" data-target=".testConvertFormatToRegExAllStandard .collapse">
+<h2>testConvertFormatToRegExAllStandard()
+        </h2>
+<pre>testConvertFormatToRegExAllStandard() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testProcessApacheLogCommandBasic</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testConvertFormatToRegExCombined" id="testConvertFormatToRegExCombined"></a><div class="element clickable method public testConvertFormatToRegExCombined" data-toggle="collapse" data-target=".testConvertFormatToRegExCombined .collapse">
+<h2>testConvertFormatToRegExCombined()
+        </h2>
+<pre>testConvertFormatToRegExCombined() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testProcessApacheLogCommandSegments</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testConvertFormatToRegExCommon" id="testConvertFormatToRegExCommon"></a><div class="element clickable method public testConvertFormatToRegExCommon" data-toggle="collapse" data-target=".testConvertFormatToRegExCommon .collapse">
+<h2>testConvertFormatToRegExCommon()
+        </h2>
+<pre>testConvertFormatToRegExCommon() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testProcessApacheLogCommandBasic</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testConvertFormatToRegExConditional" id="testConvertFormatToRegExConditional"></a><div class="element clickable method public testConvertFormatToRegExConditional" data-toggle="collapse" data-target=".testConvertFormatToRegExConditional .collapse">
+<h2>testConvertFormatToRegExConditional()
+        </h2>
+<pre>testConvertFormatToRegExConditional() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testProcessApacheLogCommandSegments</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testGetRowOneCommon" id="testGetRowOneCommon"></a><div class="element clickable method public testGetRowOneCommon" data-toggle="collapse" data-target=".testGetRowOneCommon .collapse">
+<h2>testGetRowOneCommon()
+        </h2>
+<pre>testGetRowOneCommon() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testParseLogCommonAll</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testParseLogAllSegmentedAll" id="testParseLogAllSegmentedAll"></a><div class="element clickable method public testParseLogAllSegmentedAll" data-toggle="collapse" data-target=".testParseLogAllSegmentedAll .collapse">
+<h2>testParseLogAllSegmentedAll()
+        </h2>
+<pre>testParseLogAllSegmentedAll() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testParseLogAllSegmentedOne</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testParseLogAllSegmentedOne" id="testParseLogAllSegmentedOne"></a><div class="element clickable method public testParseLogAllSegmentedOne" data-toggle="collapse" data-target=".testParseLogAllSegmentedOne .collapse">
+<h2>testParseLogAllSegmentedOne()
+        </h2>
+<pre>testParseLogAllSegmentedOne() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testConvertFormatToRegExAllSegmented</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testParseLogAllStandardAll" id="testParseLogAllStandardAll"></a><div class="element clickable method public testParseLogAllStandardAll" data-toggle="collapse" data-target=".testParseLogAllStandardAll .collapse">
+<h2>testParseLogAllStandardAll()
+        </h2>
+<pre>testParseLogAllStandardAll() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testParseLogAllStandardOne</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testParseLogAllStandardOne" id="testParseLogAllStandardOne"></a><div class="element clickable method public testParseLogAllStandardOne" data-toggle="collapse" data-target=".testParseLogAllStandardOne .collapse">
+<h2>testParseLogAllStandardOne()
+        </h2>
+<pre>testParseLogAllStandardOne() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testConvertFormatToRegExAllStandard</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testParseLogCombinedAll" id="testParseLogCombinedAll"></a><div class="element clickable method public testParseLogCombinedAll" data-toggle="collapse" data-target=".testParseLogCombinedAll .collapse">
+<h2>testParseLogCombinedAll()
+        </h2>
+<pre>testParseLogCombinedAll() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testParseLogCombinedOne</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testParseLogCombinedOne" id="testParseLogCombinedOne"></a><div class="element clickable method public testParseLogCombinedOne" data-toggle="collapse" data-target=".testParseLogCombinedOne .collapse">
+<h2>testParseLogCombinedOne()
+        </h2>
+<pre>testParseLogCombinedOne() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testConvertFormatToRegExCombined</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testParseLogCommonAll" id="testParseLogCommonAll"></a><div class="element clickable method public testParseLogCommonAll" data-toggle="collapse" data-target=".testParseLogCommonAll .collapse">
+<h2>testParseLogCommonAll()
+        </h2>
+<pre>testParseLogCommonAll() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testParseLogCommonOne</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testParseLogCommonOne" id="testParseLogCommonOne"></a><div class="element clickable method public testParseLogCommonOne" data-toggle="collapse" data-target=".testParseLogCommonOne .collapse">
+<h2>testParseLogCommonOne()
+        </h2>
+<pre>testParseLogCommonOne() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testConvertFormatToRegExCommon</td>
+</tr></table>
+</div></div>
+</div>
+<a name="testProcessApacheLogCommandBasic" id="testProcessApacheLogCommandBasic"></a><div class="element clickable method public testProcessApacheLogCommandBasic" data-toggle="collapse" data-target=".testProcessApacheLogCommandBasic .collapse">
+<h2>testProcessApacheLogCommandBasic()
+        </h2>
+<pre>testProcessApacheLogCommandBasic() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="testProcessApacheLogCommandSegments" id="testProcessApacheLogCommandSegments"></a><div class="element clickable method public testProcessApacheLogCommandSegments" data-toggle="collapse" data-target=".testProcessApacheLogCommandSegments .collapse">
+<h2>testProcessApacheLogCommandSegments()
+        </h2>
+<pre>testProcessApacheLogCommandSegments() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>depends</th>
+<td>testProcessApacheLogCommandBasic</td>
+</tr></table>
+</div></div>
+</div>
+<a name="throwException" id="throwException"></a><div class="element clickable method public throwException" data-toggle="collapse" data-target=".throwException .collapse">
+<h2>throwException()
+        </h2>
+<pre>throwException() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::throwException()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="toString" id="toString"></a><div class="element clickable method public toString" data-toggle="collapse" data-target=".toString .collapse">
+<h2>toString()
+        </h2>
+<pre>toString() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::toString()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertPostConditions" id="assertPostConditions"></a><div class="element clickable method protected assertPostConditions" data-toggle="collapse" data-target=".assertPostConditions .collapse">
+<h2>assertPostConditions()
+        </h2>
+<pre>assertPostConditions() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::assertPostConditions()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="assertPreConditions" id="assertPreConditions"></a><div class="element clickable method protected assertPreConditions" data-toggle="collapse" data-target=".assertPreConditions .collapse">
+<h2>assertPreConditions()
+        </h2>
+<pre>assertPreConditions() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::assertPreConditions()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="checkRequirements" id="checkRequirements"></a><div class="element clickable method protected checkRequirements" data-toggle="collapse" data-target=".checkRequirements .collapse">
+<h2>checkRequirements()
+        </h2>
+<pre>checkRequirements() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::checkRequirements()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="createResult" id="createResult"></a><div class="element clickable method protected createResult" data-toggle="collapse" data-target=".createResult .collapse">
+<h2>createResult()
+        </h2>
+<pre>createResult() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::createResult()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="dataToString" id="dataToString"></a><div class="element clickable method protected dataToString" data-toggle="collapse" data-target=".dataToString .collapse">
+<h2>dataToString()
+        </h2>
+<pre>dataToString() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::dataToString()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getDataSetAsString" id="getDataSetAsString"></a><div class="element clickable method protected getDataSetAsString" data-toggle="collapse" data-target=".getDataSetAsString .collapse">
+<h2>getDataSetAsString()
+        </h2>
+<pre>getDataSetAsString() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getDataSetAsString()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getMockClass" id="getMockClass"></a><div class="element clickable method protected getMockClass" data-toggle="collapse" data-target=".getMockClass .collapse">
+<h2>getMockClass()
+        </h2>
+<pre>getMockClass() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getMockClass()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getMockFromWsdl" id="getMockFromWsdl"></a><div class="element clickable method protected getMockFromWsdl" data-toggle="collapse" data-target=".getMockFromWsdl .collapse">
+<h2>getMockFromWsdl()
+        </h2>
+<pre>getMockFromWsdl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getMockFromWsdl()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getObjectForTrait" id="getObjectForTrait"></a><div class="element clickable method protected getObjectForTrait" data-toggle="collapse" data-target=".getObjectForTrait .collapse">
+<h2>getObjectForTrait()
+        </h2>
+<pre>getObjectForTrait() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::getObjectForTrait()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="handleDependencies" id="handleDependencies"></a><div class="element clickable method protected handleDependencies" data-toggle="collapse" data-target=".handleDependencies .collapse">
+<h2>handleDependencies()
+        </h2>
+<pre>handleDependencies() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::handleDependencies()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="iniSet" id="iniSet"></a><div class="element clickable method protected iniSet" data-toggle="collapse" data-target=".iniSet .collapse">
+<h2>iniSet()
+        </h2>
+<pre>iniSet() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::iniSet()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="onNotSuccessfulTest" id="onNotSuccessfulTest"></a><div class="element clickable method protected onNotSuccessfulTest" data-toggle="collapse" data-target=".onNotSuccessfulTest .collapse">
+<h2>onNotSuccessfulTest()
+        </h2>
+<pre>onNotSuccessfulTest() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::onNotSuccessfulTest()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="prepareTemplate" id="prepareTemplate"></a><div class="element clickable method protected prepareTemplate" data-toggle="collapse" data-target=".prepareTemplate .collapse">
+<h2>prepareTemplate()
+        </h2>
+<pre>prepareTemplate() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::prepareTemplate()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="runTest" id="runTest"></a><div class="element clickable method protected runTest" data-toggle="collapse" data-target=".runTest .collapse">
+<h2>runTest()
+        </h2>
+<pre>runTest() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::runTest()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setExpectedExceptionFromAnnotation" id="setExpectedExceptionFromAnnotation"></a><div class="element clickable method protected setExpectedExceptionFromAnnotation" data-toggle="collapse" data-target=".setExpectedExceptionFromAnnotation .collapse">
+<h2>setExpectedExceptionFromAnnotation()
+        </h2>
+<pre>setExpectedExceptionFromAnnotation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setExpectedExceptionFromAnnotation()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setLocale" id="setLocale"></a><div class="element clickable method protected setLocale" data-toggle="collapse" data-target=".setLocale .collapse">
+<h2>setLocale()
+        </h2>
+<pre>setLocale() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setLocale()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setRequirementsFromAnnotation" id="setRequirementsFromAnnotation"></a><div class="element clickable method protected setRequirementsFromAnnotation" data-toggle="collapse" data-target=".setRequirementsFromAnnotation .collapse">
+<h2>setRequirementsFromAnnotation()
+        </h2>
+<pre>setRequirementsFromAnnotation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setRequirementsFromAnnotation()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setUp" id="setUp"></a><div class="element clickable method protected setUp" data-toggle="collapse" data-target=".setUp .collapse">
+<h2>setUp()
+        </h2>
+<pre>setUp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="setUseErrorHandlerFromAnnotation" id="setUseErrorHandlerFromAnnotation"></a><div class="element clickable method protected setUseErrorHandlerFromAnnotation" data-toggle="collapse" data-target=".setUseErrorHandlerFromAnnotation .collapse">
+<h2>setUseErrorHandlerFromAnnotation()
+        </h2>
+<pre>setUseErrorHandlerFromAnnotation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setUseErrorHandlerFromAnnotation()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setUseOutputBufferingFromAnnotation" id="setUseOutputBufferingFromAnnotation"></a><div class="element clickable method protected setUseOutputBufferingFromAnnotation" data-toggle="collapse" data-target=".setUseOutputBufferingFromAnnotation .collapse">
+<h2>setUseOutputBufferingFromAnnotation()
+        </h2>
+<pre>setUseOutputBufferingFromAnnotation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::setUseOutputBufferingFromAnnotation()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="tearDown" id="tearDown"></a><div class="element clickable method protected tearDown" data-toggle="collapse" data-target=".tearDown .collapse">
+<h2>tearDown()
+        </h2>
+<pre>tearDown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::tearDown()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="verifyMockObjects" id="verifyMockObjects"></a><div class="element clickable method protected verifyMockObjects" data-toggle="collapse" data-target=".verifyMockObjects .collapse">
+<h2>verifyMockObjects()
+        </h2>
+<pre>verifyMockObjects() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>PHPUnit_Framework_TestCase::verifyMockObjects()</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24logFiles" id="$logFiles"> </a><div class="element clickable property protected $logFiles" data-toggle="collapse" data-target=".$logFiles .collapse">
+<h2>Paths to the log files to be used for testing</h2>
+<pre>$logFiles : \apacheLogParser\array[string]string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24logFormats" id="$logFormats"> </a><div class="element clickable property protected $logFormats" data-toggle="collapse" data-target=".$logFormats .collapse">
+<h2>Log formats to be used for testing</h2>
+<pre>$logFormats : \apacheLogParser\array[string]string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24object" id="$object"> </a><div class="element clickable property protected $object" data-toggle="collapse" data-target=".$object .collapse">
+<h2>$object</h2>
+<pre>$object : <a href="../classes/db_%5CapacheLogParser%5CApacheLogFile.html">\apacheLogParser\ApacheLogFile</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24recordMock" id="$recordMock"> </a><div class="element clickable property protected $recordMock" data-toggle="collapse" data-target=".$recordMock .collapse">
+<h2>Mock of the ApacheLogRecord to be used in testing</h2>
+<pre>$recordMock : <a href="../classes/db_%5CapacheLogParser%5CApacheLogRecord.html">\apacheLogParser\ApacheLogRecord</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a1</a> and<br>
+            generated on 2012-03-27T00:13:20-05:00.<br></footer></div>
+</div>
+</body>
+</html>

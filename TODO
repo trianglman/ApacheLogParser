@@ -1,0 +1,4 @@
+1) Create a bootloader to make it easy to integrate with spl_autoload
+2) Handle Apache error logs
+3) Implement ArrayIterator http://www.php.net/manual/en/class.arrayiterator.php
+4) Improve the parsing for the Apache log commands that I don't fully understand

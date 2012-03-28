@@ -5,18 +5,14 @@ Apache Log Parser Reader
 :Date:      2012-03-27
 :Revision:  0.1
 
-About the parser
-~~~~~~~
-
+.About the parser
 These classes are designed to take an access log from Apache and convert it into 
 a PHP object that can then be used to populate a database or parsed further.
 
-Installing
-~~~~~~~
-
+.Installing
 Download the source from Github
 
-[source,bash]
+----
 git clone git://github.com/trianglman/ApacheLogParser.git
 ----
 
@@ -24,34 +20,28 @@ There are only two files necessary for the parsing: apacheLogFile.php and
 apacheLogRecord.php. Copy those into your source code or your PHP include path
 and include both files.
 
-Usage
-~~~~~~~
-
+.Usage
 The primary class you'll need to work with is \ApacheLogParser\ApacheLogFile. To
 prepare the parser call it's constructor with the contents of the log file as 
 the first argument and the 
 https://httpd.apache.org/docs/2.4/mod/mod_log_config.html#customlog[CustomLog] 
 format it was created with.
-
-[source,php]
+----
 $logFile = new \ApacheLogParser\ApacheLogFile($fileContents,
                                             '%h %l %u %t \\"%r\\" %>s %b');
 ----
-
 You can then retrieve an array of all the log entries or an individual record 
 with the getRow() function.
 
-[source,php]
-//gets the full set of records
-$records = $logFile->getRow();
-
-//gets just the first record
-$firstAccess = $logFile->getRow(1);
+----
+//gets the full set of records 
+$records = $logFile->getRow(); 
+ 
+//gets just the first record 
+$firstAccess = $logFile->getRow(0); 
 ----
 
-About the author
-~~~~~~~
-
+.About the author
 John Judy is a software developer who has been working with PHP since 2001. He 
 has worked for a number of e-commerce websites and currently works for a court
 transcription and legal document service and retrieval firm.

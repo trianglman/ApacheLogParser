@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a1" title="">
+  <file path="apacheLogFile.php" hash="00a02ecc85945f80914097ad31d02811" package="Default">
+    <markers>
+      <todo line="172">Set this up to handle host names as well as IPs</todo>
+      <todo line="176">Don't know what regular expression to put here</todo>
+      <todo line="185">Don't know what regular expression to put here</todo>
+      <todo line="228">Set up to handle alternative formats</todo>
+    </markers>
+    <parse_markers>
+      <error line="4" code="50000">No DocBlock was found for ApacheLogFile</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file apacheLogFile.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="apacheLogParser" line="4" package="Default">
+      <name>ApacheLogFile</name>
+      <full_name>\apacheLogParser\ApacheLogFile</full_name>
+      <extends/>
+      <property final="false" static="false" visibility="protected" line="10" package="Default">
+        <name>$file</name>
+        <default><![CDATA['']]></default>
+        <docblock line="5">
+          <description><![CDATA[The file contents of the log file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="5" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="16" package="Default">
+        <name>$rows</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="11">
+          <description><![CDATA[The parsed out log entries]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="11" name="var" description="" type="\apacheLogParser\array[int]ApacheLogRecord">
+            <type by_reference="false">\apacheLogParser\array[int]ApacheLogRecord</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="23" package="Default">
+        <name>$format</name>
+        <default><![CDATA['']]></default>
+        <docblock line="17">
+          <description><![CDATA[The Apache CustomLog/LogFormat for the log file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="17" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="17" name="see" description="\apacheLogParser\https://httpd.apache.org/docs/2.0/mod/mod_log_config.html" refers="\apacheLogParser\https://httpd.apache.org/docs/2.0/mod/mod_log_config.html"/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="29" package="Default">
+        <name>$logPieces</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="24">
+          <description><![CDATA[The expected pieces of the log parsed from $format]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="24" name="var" description="" type="\apacheLogParser\array[int]string">
+            <type by_reference="false">\apacheLogParser\array[int]string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="39" package="">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="32">
+          <description><![CDATA[Creates the ApacheLogFile instance]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="32" name="param" description="The log to parse" type="string" variable="$logFile">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="32" name="param" description="The Apache CustomLog/LogFormat for the log file" type="string" variable="$format">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="32" name="return" description="" type="null">
+            <type by_reference="false">null</type>
+          </tag>
+        </docblock>
+        <argument line="39">
+          <name>$logFile</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$format</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="54" package="">
+        <name>getRow</name>
+        <type>function</type>
+        <docblock line="44">
+          <description><![CDATA[Gets a specified ApacheLogRecord or the entire array of them]]></description>
+          <long-description><![CDATA[<p>If this is the first time calling it, the log will be parsed before
+returning a record.</p>]]></long-description>
+          <tag line="44" name="param" description="[Optional] Default = -1 If -1, returns all records in an array" type="int" variable="$row">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="44" name="return" description="" type="\apacheLogParser\array[int]ApacheLogRecord|\apacheLogParser\ApacheLogRecord">
+            <type by_reference="false">\apacheLogParser\array[int]ApacheLogRecord</type>
+            <type by_reference="false">\apacheLogParser\ApacheLogRecord</type>
+          </tag>
+        </docblock>
+        <argument line="54">
+          <name>$row</name>
+          <default><![CDATA[-1]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="apacheLogParser" line="67" package="">
+        <name>_parseLog</name>
+        <type>function</type>
+        <docblock line="62">
+          <description><![CDATA[Parses the log file using a regular expression generated from $this->format]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="62" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="apacheLogParser" line="85" package="">
+        <name>_convertFormatToRegEx</name>
+        <type>function</type>
+        <docblock line="80">
+          <description><![CDATA[Parses the Apache log format into a regular expression]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="80" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="apacheLogParser" line="130" package="">
+        <name>_processApacheLogCommand</name>
+        <type>function</type>
+        <docblock line="119">
+          <description><![CDATA[Turns a specific Apache log directive element into a regular expression]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="119" name="param" description="" type="string" variable="$command">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="119" name="param" description="" type="string" variable="$segment">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="119" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="119" name="todo" description="This is not complete, there are a number of directives that&#10;should be made more accurate or that haven't been created yet"/>
+          <tag line="119" name="todo" description="This doesn't handle &lt; or &gt; modifiers except for the %...s directive"/>
+        </docblock>
+        <argument line="130">
+          <name>$command</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="130">
+          <name>$segment</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="apacheLogRecord.php" hash="266b6afbfe5e8a818b8155b34632521e" package="Default">
+    <parse_markers>
+      <error line="4" code="50000">No DocBlock was found for ApacheLogRecord</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file apacheLogRecord.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="apacheLogParser" line="4" package="Default">
+      <name>ApacheLogRecord</name>
+      <full_name>\apacheLogParser\ApacheLogRecord</full_name>
+      <extends/>
+      <property final="false" static="false" visibility="protected" line="9" package="Default">
+        <name>$remoteIP</name>
+        <default><![CDATA['']]></default>
+        <docblock line="5">
+          <description><![CDATA[Remote IP-address]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="5" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="14" package="Default">
+        <name>$localIP</name>
+        <default><![CDATA['']]></default>
+        <docblock line="10">
+          <description><![CDATA[Local IP-address]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="10" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="19" package="Default">
+        <name>$respBytes</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="15">
+          <description><![CDATA[Size of response in bytes, excluding HTTP headers.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="15" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="24" package="Default">
+        <name>$cookie</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="20">
+          <description><![CDATA[The contents of cookies in the request sent to the server.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="20" name="var" description="" type="\apacheLogParser\array[string]string">
+            <type by_reference="false">\apacheLogParser\array[string]string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="29" package="Default">
+        <name>$respMicro</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="25">
+          <description><![CDATA[The time taken to serve the request, in microseconds.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="25" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="34" package="Default">
+        <name>$environment</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="30">
+          <description><![CDATA[The contents of environment variables]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="30" name="var" description="" type="\apacheLogParser\array[string]string">
+            <type by_reference="false">\apacheLogParser\array[string]string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="39" package="Default">
+        <name>$filename</name>
+        <default><![CDATA['']]></default>
+        <docblock line="35">
+          <description><![CDATA[Filename]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="44" package="Default">
+        <name>$clientIP</name>
+        <default><![CDATA['']]></default>
+        <docblock line="40">
+          <description><![CDATA[Remote host]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="40" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="49" package="Default">
+        <name>$protocol</name>
+        <default><![CDATA['']]></default>
+        <docblock line="45">
+          <description><![CDATA[The request protocol]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="45" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="55" package="Default">
+        <name>$reqHeader</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="50">
+          <description><![CDATA[The contents of header line(s) in the request sent to the server.]]></description>
+          <long-description><![CDATA[<p>Changes made by other modules (e.g. mod_headers) affect this.</p>]]></long-description>
+          <tag line="50" name="var" description="" type="\apacheLogParser\array[string]string">
+            <type by_reference="false">\apacheLogParser\array[string]string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="61" package="Default">
+        <name>$remoteLogname</name>
+        <default><![CDATA['']]></default>
+        <docblock line="56">
+          <description><![CDATA[Remote logname (from identd, if supplied). This will return a dash
+unless IdentityCheck is set On.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="56" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="66" package="Default">
+        <name>$reqMethod</name>
+        <default><![CDATA['']]></default>
+        <docblock line="62">
+          <description><![CDATA[The request method]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="62" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="71" package="Default">
+        <name>$module</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="67">
+          <description><![CDATA[The contents of notes from other modules.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="67" name="var" description="" type="\apacheLogParser\array[string]string">
+            <type by_reference="false">\apacheLogParser\array[string]string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="76" package="Default">
+        <name>$respHeader</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="72">
+          <description><![CDATA[The contents of header line(s) in the reply.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="72" name="var" description="" type="\apacheLogParser\array[string]string">
+            <type by_reference="false">\apacheLogParser\array[string]string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="81" package="Default">
+        <name>$port</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="77">
+          <description><![CDATA[The canonical port of the server serving the request]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="77" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="86" package="Default">
+        <name>$pid</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="82">
+          <description><![CDATA[The process ID of the child that serviced the request.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="82" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="91" package="Default">
+        <name>$tid</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="87">
+          <description><![CDATA[The thread id of the child that serviced the request.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="87" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="97" package="Default">
+        <name>$queryString</name>
+        <default><![CDATA['']]></default>
+        <docblock line="92">
+          <description><![CDATA[The query string (prepended with a ? if a query string exists,
+otherwise an empty string)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="92" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="102" package="Default">
+        <name>$request</name>
+        <default><![CDATA['']]></default>
+        <docblock line="98">
+          <description><![CDATA[First line of request]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="98" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="109" package="Default">
+        <name>$lastStatus</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="103">
+          <description><![CDATA[Status.]]></description>
+          <long-description><![CDATA[<p>For requests that got internally redirected,
+this is the status of the last request</p>]]></long-description>
+          <tag line="103" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="116" package="Default">
+        <name>$firstStatus</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="110">
+          <description><![CDATA[Status.]]></description>
+          <long-description><![CDATA[<p>For requests that got internally redirected,
+this is the status of the original request</p>]]></long-description>
+          <tag line="110" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="121" package="Default">
+        <name>$reqTime</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="117">
+          <description><![CDATA[Time the request was received]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="117" name="var" description="" type="\apacheLogParser\DateTime">
+            <type by_reference="false">\apacheLogParser\DateTime</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="126" package="Default">
+        <name>$respSec</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="122">
+          <description><![CDATA[The time taken to serve the request, in seconds.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="122" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="131" package="Default">
+        <name>$user</name>
+        <default><![CDATA['']]></default>
+        <docblock line="127">
+          <description><![CDATA[Remote user (from auth; may be bogus if return status (%s) is 401)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="127" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="136" package="Default">
+        <name>$url</name>
+        <default><![CDATA['']]></default>
+        <docblock line="132">
+          <description><![CDATA[The URL path requested, not including any query string.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="132" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="141" package="Default">
+        <name>$serverName</name>
+        <default><![CDATA['']]></default>
+        <docblock line="137">
+          <description><![CDATA[The canonical ServerName of the server serving the request.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="137" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="146" package="Default">
+        <name>$useCanonicalServerName</name>
+        <default><![CDATA['']]></default>
+        <docblock line="142">
+          <description><![CDATA[The server name according to the UseCanonicalName setting.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="142" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="152" package="Default">
+        <name>$completeConnStatus</name>
+        <default><![CDATA[]]></default>
+        <docblock line="147">
+          <description><![CDATA[Connection status when response is completed
+One of "aborted","keep-alive","closed"]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="147" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="158" package="Default">
+        <name>$libIOBytesIn</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="153">
+          <description><![CDATA[Bytes received, including request and headers, cannot be zero.]]></description>
+          <long-description><![CDATA[<p>You need to enable mod_logio to use this.</p>]]></long-description>
+          <tag line="153" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="164" package="Default">
+        <name>$libIOBytesOut</name>
+        <default><![CDATA[0]]></default>
+        <docblock line="159">
+          <description><![CDATA[Bytes sent, including headers, cannot be zero.]]></description>
+          <long-description><![CDATA[<p>You need to enable mod_logio to use this.</p>]]></long-description>
+          <tag line="159" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="176" package="">
+        <name>logValue</name>
+        <type>function</type>
+        <docblock line="166">
+          <description><![CDATA[Stores a parsed Apache log directive appropriately]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="166" name="param" description="" type="string" variable="$logVariable">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="166" name="param" description="" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="166" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+          <tag line="166" name="throws" description="If the logVariable is not a valid variable" type="\apacheLogParser\InvalidArgumentException">
+            <type by_reference="false">\apacheLogParser\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="176">
+          <name>$logVariable</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="176">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="222" package="">
+        <name>__get</name>
+        <type>function</type>
+        <docblock line="214">
+          <description><![CDATA[Gets a log variable]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="214" name="param" description="" type="string" variable="$varName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="214" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="214" name="throws" description="If the requested variable doesn't exist" type="\apacheLogParser\InvalidArgumentException">
+            <type by_reference="false">\apacheLogParser\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="222">
+          <name>$varName</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="237" package="">
+        <name>getCookie</name>
+        <type>function</type>
+        <docblock line="229">
+          <description><![CDATA[Gets a logged cookie value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="229" name="param" description="The cookie to be looked up" type="string" variable="$pos">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="229" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="229" name="throws" description="If the value doesn't exist" type="\apacheLogParser\InvalidArgumentException">
+            <type by_reference="false">\apacheLogParser\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="237">
+          <name>$pos</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="250" package="">
+        <name>getEnvironment</name>
+        <type>function</type>
+        <docblock line="242">
+          <description><![CDATA[Gets a logged environment variable value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="242" name="param" description="The environment variable to be looked up" type="string" variable="$pos">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="242" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="242" name="throws" description="If the value doesn't exist" type="\apacheLogParser\InvalidArgumentException">
+            <type by_reference="false">\apacheLogParser\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="250">
+          <name>$pos</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="263" package="">
+        <name>getReqHeader</name>
+        <type>function</type>
+        <docblock line="255">
+          <description><![CDATA[Gets a logged request header value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="255" name="param" description="The request header to be looked up" type="string" variable="$pos">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="255" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="255" name="throws" description="If the value doesn't exist" type="\apacheLogParser\InvalidArgumentException">
+            <type by_reference="false">\apacheLogParser\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="263">
+          <name>$pos</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="276" package="">
+        <name>getModule</name>
+        <type>function</type>
+        <docblock line="268">
+          <description><![CDATA[Gets a logged module value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="268" name="param" description="The module to be looked up" type="string" variable="$pos">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="268" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="268" name="throws" description="If the value doesn't exist" type="\apacheLogParser\InvalidArgumentException">
+            <type by_reference="false">\apacheLogParser\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="276">
+          <name>$pos</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="289" package="">
+        <name>getRespHeader</name>
+        <type>function</type>
+        <docblock line="281">
+          <description><![CDATA[Gets a logged response header value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="281" name="param" description="The response header to be looked up" type="string" variable="$pos">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="281" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="281" name="throws" description="If the value doesn't exist" type="\apacheLogParser\InvalidArgumentException">
+            <type by_reference="false">\apacheLogParser\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="289">
+          <name>$pos</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="tests/apacheLogRecordTest.php" hash="54a7b057e29a6a14c8d70f877be2cba2" package="Default">
+    <parse_markers>
+      <error line="6" code="50010">No DocBlock was found for method testAddLoggedValue()</error>
+      <error line="14" code="50012">No short description for method testAddIntegerLoggedValue()</error>
+      <error line="14" code="50015">Argument $log is missing from the Docblock of testAddIntegerLoggedValue()</error>
+      <error line="23" code="50012">No short description for method testAddIntegerRespBytes()</error>
+      <error line="23" code="50015">Argument $log is missing from the Docblock of testAddIntegerRespBytes()</error>
+      <error line="33" code="50012">No short description for method testAddDashRespBytes()</error>
+      <error line="33" code="50015">Argument $log is missing from the Docblock of testAddDashRespBytes()</error>
+      <error line="42" code="50012">No short description for method testAddValidReqTime()</error>
+      <error line="42" code="50015">Argument $log is missing from the Docblock of testAddValidReqTime()</error>
+      <error line="56" code="50012">No short description for method testSetCompleteConnStatus()</error>
+      <error line="56" code="50015">Argument $log is missing from the Docblock of testSetCompleteConnStatus()</error>
+      <error line="68" code="50012">No short description for method testSetRequestHeader()</error>
+      <error line="68" code="50015">Argument $log is missing from the Docblock of testSetRequestHeader()</error>
+      <error line="80" code="50012">No short description for method testOverwriteRequestHeader()</error>
+      <error line="80" code="50015">Argument $log is missing from the Docblock of testOverwriteRequestHeader()</error>
+      <error line="92" code="50012">No short description for method testSetTwoRequestHeader()</error>
+      <error line="92" code="50015">Argument $log is missing from the Docblock of testSetTwoRequestHeader()</error>
+      <error line="105" code="50015">Argument $log is missing from the Docblock of testSetCookie()</error>
+      <error line="119" code="50015">Argument $log is missing from the Docblock of testSetEnvironment()</error>
+      <error line="132" code="50015">Argument $log is missing from the Docblock of testSetRespHeader()</error>
+      <error line="144" code="50015">Argument $log is missing from the Docblock of testSetModule()</error>
+      <error line="155" code="50012">No short description for method testSetInvalidArrayVariable()</error>
+      <error line="155" code="50015">Argument $log is missing from the Docblock of testSetInvalidArrayVariable()</error>
+      <error line="163" code="50012">No short description for method testSetInvalidVariable()</error>
+      <error line="163" code="50015">Argument $log is missing from the Docblock of testSetInvalidVariable()</error>
+      <error line="177" code="50012">No short description for method testGetInvalidVariable()</error>
+      <error line="177" code="50015">Argument $log is missing from the Docblock of testGetInvalidVariable()</error>
+      <error line="185" code="50012">No short description for method testGetInvalidReqHeader()</error>
+      <error line="185" code="50015">Argument $log is missing from the Docblock of testGetInvalidReqHeader()</error>
+      <error line="193" code="50012">No short description for method testGetInvalidCookie()</error>
+      <error line="193" code="50015">Argument $log is missing from the Docblock of testGetInvalidCookie()</error>
+      <error line="201" code="50012">No short description for method testGetInvalidEnvironment()</error>
+      <error line="201" code="50015">Argument $log is missing from the Docblock of testGetInvalidEnvironment()</error>
+      <error line="209" code="50012">No short description for method testGetInvalidRespHeader()</error>
+      <error line="209" code="50015">Argument $log is missing from the Docblock of testGetInvalidRespHeader()</error>
+      <error line="217" code="50012">No short description for method testGetInvalidModule()</error>
+      <error line="217" code="50015">Argument $log is missing from the Docblock of testGetInvalidModule()</error>
+      <error line="5" code="50000">No DocBlock was found for ApacheLogRecordTest</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file tests/apacheLogRecordTest.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="apacheLogParser" line="5" package="Default">
+      <name>ApacheLogRecordTest</name>
+      <full_name>\apacheLogParser\ApacheLogRecordTest</full_name>
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="6" package="">
+        <name>testAddLoggedValue</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="17" package="">
+        <name>testAddIntegerLoggedValue</name>
+        <type>function</type>
+        <docblock line="14">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="14" name="depends" description="testAddLoggedValue"/>
+        </docblock>
+        <argument line="17">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="26" package="">
+        <name>testAddIntegerRespBytes</name>
+        <type>function</type>
+        <docblock line="23">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="23" name="depends" description="testAddLoggedValue"/>
+        </docblock>
+        <argument line="26">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="36" package="">
+        <name>testAddDashRespBytes</name>
+        <type>function</type>
+        <docblock line="33">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="33" name="depends" description="testAddIntegerRespBytes"/>
+        </docblock>
+        <argument line="36">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="45" package="">
+        <name>testAddValidReqTime</name>
+        <type>function</type>
+        <docblock line="42">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="42" name="depends" description="testAddLoggedValue"/>
+        </docblock>
+        <argument line="45">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="59" package="">
+        <name>testSetCompleteConnStatus</name>
+        <type>function</type>
+        <docblock line="56">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="56" name="depends" description="testAddLoggedValue"/>
+        </docblock>
+        <argument line="59">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="71" package="">
+        <name>testSetRequestHeader</name>
+        <type>function</type>
+        <docblock line="68">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="68" name="depends" description="testAddLoggedValue"/>
+        </docblock>
+        <argument line="71">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="83" package="">
+        <name>testOverwriteRequestHeader</name>
+        <type>function</type>
+        <docblock line="80">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="80" name="depends" description="testSetRequestHeader"/>
+        </docblock>
+        <argument line="83">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="95" package="">
+        <name>testSetTwoRequestHeader</name>
+        <type>function</type>
+        <docblock line="92">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="92" name="depends" description="testSetRequestHeader"/>
+        </docblock>
+        <argument line="95">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="109" package="">
+        <name>testSetCookie</name>
+        <type>function</type>
+        <docblock line="105">
+          <description><![CDATA[Same test as for RequestHeader, but different variable]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="105" name="depends" description="testSetTwoRequestHeader"/>
+        </docblock>
+        <argument line="109">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="123" package="">
+        <name>testSetEnvironment</name>
+        <type>function</type>
+        <docblock line="119">
+          <description><![CDATA[Same test as for RequestHeader, but different variable]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="119" name="depends" description="testSetCookie"/>
+        </docblock>
+        <argument line="123">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="136" package="">
+        <name>testSetRespHeader</name>
+        <type>function</type>
+        <docblock line="132">
+          <description><![CDATA[Same test as for RequestHeader, but different variable]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="132" name="depends" description="testSetCookie"/>
+        </docblock>
+        <argument line="136">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="148" package="">
+        <name>testSetModule</name>
+        <type>function</type>
+        <docblock line="144">
+          <description><![CDATA[Same test as for RequestHeader, but different variable]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="144" name="depends" description="testSetCookie"/>
+        </docblock>
+        <argument line="148">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="159" package="">
+        <name>testSetInvalidArrayVariable</name>
+        <type>function</type>
+        <docblock line="155">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="155" name="depends" description="testSetRequestHeader"/>
+          <tag line="155" name="expectedException" description="\InvalidArgumentException"/>
+        </docblock>
+        <argument line="159">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="166" package="">
+        <name>testSetInvalidVariable</name>
+        <type>function</type>
+        <docblock line="163">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="163" name="depends" description="testSetRequestHeader"/>
+        </docblock>
+        <argument line="166">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="181" package="">
+        <name>testGetInvalidVariable</name>
+        <type>function</type>
+        <docblock line="177">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="177" name="depends" description="testSetInvalidVariable"/>
+          <tag line="177" name="expectedException" description="\InvalidArgumentException"/>
+        </docblock>
+        <argument line="181">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="189" package="">
+        <name>testGetInvalidReqHeader</name>
+        <type>function</type>
+        <docblock line="185">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="185" name="depends" description="testSetRequestHeader"/>
+          <tag line="185" name="expectedException" description="\InvalidArgumentException"/>
+        </docblock>
+        <argument line="189">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="197" package="">
+        <name>testGetInvalidCookie</name>
+        <type>function</type>
+        <docblock line="193">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="193" name="depends" description="testSetCookie"/>
+          <tag line="193" name="expectedException" description="\InvalidArgumentException"/>
+        </docblock>
+        <argument line="197">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="205" package="">
+        <name>testGetInvalidEnvironment</name>
+        <type>function</type>
+        <docblock line="201">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="201" name="depends" description="testSetEnvironment"/>
+          <tag line="201" name="expectedException" description="\InvalidArgumentException"/>
+        </docblock>
+        <argument line="205">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="213" package="">
+        <name>testGetInvalidRespHeader</name>
+        <type>function</type>
+        <docblock line="209">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="209" name="depends" description="testSetRespHeader"/>
+          <tag line="209" name="expectedException" description="\InvalidArgumentException"/>
+        </docblock>
+        <argument line="213">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="221" package="">
+        <name>testGetInvalidModule</name>
+        <type>function</type>
+        <docblock line="217">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="217" name="depends" description="testSetModule"/>
+          <tag line="217" name="expectedException" description="\InvalidArgumentException"/>
+        </docblock>
+        <argument line="221">
+          <name>$log</name>
+          <default><![CDATA[]]></default>
+          <type>ApacheLogRecord</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="tests/ApacheLogFileTest.php" hash="4d8af0d6ee864966ec424f92ba855457" package="Default">
+    <parse_markers>
+      <critical line="19" code="50019">No short description for property $object</critical>
+      <error line="41" code="50010">No DocBlock was found for method setUp()</error>
+      <error line="66" code="50010">No DocBlock was found for method teardown()</error>
+      <error line="72" code="50010">No DocBlock was found for method testProcessApacheLogCommandBasic()</error>
+      <error line="122" code="50012">No short description for method testProcessApacheLogCommandSegments()</error>
+      <error line="151" code="50012">No short description for method testConvertFormatToRegExCommon()</error>
+      <error line="172" code="50012">No short description for method testConvertFormatToRegExCombined()</error>
+      <error line="195" code="50012">No short description for method testConvertFormatToRegExAllStandard()</error>
+      <error line="224" code="50012">No short description for method testConvertFormatToRegExAllSegmented()</error>
+      <error line="246" code="50012">No short description for method testConvertFormatToRegExConditional()</error>
+      <error line="263" code="50012">No short description for method testParseLogCommonOne()</error>
+      <error line="298" code="50012">No short description for method testParseLogCommonAll()</error>
+      <error line="320" code="50012">No short description for method testParseLogCombinedOne()</error>
+      <error line="358" code="50012">No short description for method testParseLogCombinedAll()</error>
+      <error line="380" code="50012">No short description for method testParseLogAllStandardOne()</error>
+      <error line="448" code="50012">No short description for method testParseLogAllStandardAll()</error>
+      <error line="470" code="50012">No short description for method testParseLogAllSegmentedOne()</error>
+      <error line="506" code="50012">No short description for method testParseLogAllSegmentedAll()</error>
+      <error line="528" code="50012">No short description for method testGetRowOneCommon()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file tests/ApacheLogFileTest.php</error>
+    </parse_markers>
+    <namespace-alias name="m">\Mockery</namespace-alias>
+    <include line="4" type="Require Once" package="Default">
+      <name>Mockery/Loader.php</name>
+    </include>
+    <include line="5" type="Require Once" package="Default">
+      <name>Hamcrest/Hamcrest.php</name>
+    </include>
+    <include line="11" type="Require Once" package="Default">
+      <name>/../apacheLogFile.php</name>
+    </include>
+    <class final="false" abstract="false" namespace="apacheLogParser" line="17" package="Default">
+      <name>ApacheLogFileTest</name>
+      <full_name>\apacheLogParser\ApacheLogFileTest</full_name>
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <docblock line="13">
+        <description><![CDATA[Test class for ApacheLogFile.]]></description>
+        <long-description><![CDATA[<p>Generated by PHPUnit on 2012-03-22 at 23:51:45.</p>]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="22" package="Default">
+        <name>$object</name>
+        <default><![CDATA[]]></default>
+        <docblock line="19">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="19" name="var" description="" type="\apacheLogParser\ApacheLogFile">
+            <type by_reference="false">\apacheLogParser\ApacheLogFile</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="28" package="Default">
+        <name>$logFormats</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="24">
+          <description><![CDATA[Log formats to be used for testing]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="24" name="var" description="" type="\apacheLogParser\array[string]string">
+            <type by_reference="false">\apacheLogParser\array[string]string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="33" package="Default">
+        <name>$logFiles</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="29">
+          <description><![CDATA[Paths to the log files to be used for testing]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="var" description="" type="\apacheLogParser\array[string]string">
+            <type by_reference="false">\apacheLogParser\array[string]string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="39" package="Default">
+        <name>$recordMock</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="35">
+          <description><![CDATA[Mock of the ApacheLogRecord to be used in testing]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="var" description="" type="\apacheLogParser\ApacheLogRecord">
+            <type by_reference="false">\apacheLogParser\ApacheLogRecord</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="apacheLogParser" line="41" package="">
+        <name>setUp</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="66" package="">
+        <name>teardown</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="72" package="">
+        <name>testProcessApacheLogCommandBasic</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="125" package="">
+        <name>testProcessApacheLogCommandSegments</name>
+        <type>function</type>
+        <docblock line="122">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="122" name="depends" description="testProcessApacheLogCommandBasic"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="154" package="">
+        <name>testConvertFormatToRegExCommon</name>
+        <type>function</type>
+        <docblock line="151">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="151" name="depends" description="testProcessApacheLogCommandBasic"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="175" package="">
+        <name>testConvertFormatToRegExCombined</name>
+        <type>function</type>
+        <docblock line="172">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="172" name="depends" description="testProcessApacheLogCommandSegments"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="198" package="">
+        <name>testConvertFormatToRegExAllStandard</name>
+        <type>function</type>
+        <docblock line="195">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="195" name="depends" description="testProcessApacheLogCommandBasic"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="227" package="">
+        <name>testConvertFormatToRegExAllSegmented</name>
+        <type>function</type>
+        <docblock line="224">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="224" name="depends" description="testProcessApacheLogCommandSegments"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="249" package="">
+        <name>testConvertFormatToRegExConditional</name>
+        <type>function</type>
+        <docblock line="246">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="246" name="depends" description="testProcessApacheLogCommandSegments"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="266" package="">
+        <name>testParseLogCommonOne</name>
+        <type>function</type>
+        <docblock line="263">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="263" name="depends" description="testConvertFormatToRegExCommon"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="301" package="">
+        <name>testParseLogCommonAll</name>
+        <type>function</type>
+        <docblock line="298">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="298" name="depends" description="testParseLogCommonOne"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="323" package="">
+        <name>testParseLogCombinedOne</name>
+        <type>function</type>
+        <docblock line="320">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="320" name="depends" description="testConvertFormatToRegExCombined"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="361" package="">
+        <name>testParseLogCombinedAll</name>
+        <type>function</type>
+        <docblock line="358">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="358" name="depends" description="testParseLogCombinedOne"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="383" package="">
+        <name>testParseLogAllStandardOne</name>
+        <type>function</type>
+        <docblock line="380">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="380" name="depends" description="testConvertFormatToRegExAllStandard"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="451" package="">
+        <name>testParseLogAllStandardAll</name>
+        <type>function</type>
+        <docblock line="448">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="448" name="depends" description="testParseLogAllStandardOne"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="473" package="">
+        <name>testParseLogAllSegmentedOne</name>
+        <type>function</type>
+        <docblock line="470">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="470" name="depends" description="testConvertFormatToRegExAllSegmented"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="509" package="">
+        <name>testParseLogAllSegmentedAll</name>
+        <type>function</type>
+        <docblock line="506">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="506" name="depends" description="testParseLogAllSegmentedOne"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="apacheLogParser" line="531" package="">
+        <name>testGetRowOneCommon</name>
+        <type>function</type>
+        <docblock line="528">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="528" name="depends" description="testParseLogCommonAll"/>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="tests/bootstrap.php" hash="ab063ae561b1e0d61a5cc69a32b2c101" package="Default">
+    <parse_markers>
+      <error line="3" code="50009">No DocBlock was found for function autoload()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file tests/bootstrap.php</error>
+    </parse_markers>
+    <function namespace="default" line="3" package="Default">
+      <name>autoload</name>
+      <type>function</type>
+      <argument line="3">
+        <name>$class</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+  </file>
+  <package name="" full_name=""/>
+  <package name="Default" full_name="Default"/>
+  <namespace name="apacheLogParser" full_name="apacheLogParser"/>
+  <namespace name="default" full_name="default"/>
+  <marker>todo</marker>
+  <marker>fixme</marker>
+</project>

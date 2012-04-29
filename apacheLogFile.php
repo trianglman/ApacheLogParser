@@ -44,6 +44,8 @@ class ApacheLogFile{
     /**
      * Gets a specified ApacheLogRecord or the entire array of them
      * 
+     * The records are zero indexed.
+     * 
      * If this is the first time calling it, the log will be parsed before 
      * returning a record.
      * 
